@@ -104,6 +104,7 @@
             this.Controls.Add(this.buttonEasySearch);
             this.Name = "F_Menu";
             this.Text = "トップメニュー";
+            this.Activated += new System.EventHandler(this.F_Menu_Activated);
             this.ResumeLayout(false);
             this.PerformLayout();
 

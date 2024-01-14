@@ -62,7 +62,7 @@ namespace PriceCompareSystem
 
             int rank = ranklist.IndexOf(int.Parse(price.ToString())) + 1;
 
-            labelCount.Text = count.ToString() + "店舗中" + rank.ToString() + "位";
+            labelCount.Text = "取り扱い店舗 " + count.ToString() + "店舗中" + rank.ToString() + "位";
 
 
             int reviewcount = context.M_Reviews.Where(x => x.StID == stid).Count();
@@ -181,6 +181,7 @@ namespace PriceCompareSystem
                 fncAllSelect();
                 dataGridViewReview.Visible = true;
                 buttonReview.Visible = true;
+                labelReviewScore.Visible = true;
                 panelReview.Visible = false;
             }
             catch (Exception ex)
@@ -194,6 +195,7 @@ namespace PriceCompareSystem
         {
             dataGridViewReview.Visible = false;
             buttonReview.Visible = false;
+            labelReviewScore.Visible = false;
             panelReview.Visible = true;
         }
     }

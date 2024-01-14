@@ -45,13 +45,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.labelStName = new System.Windows.Forms.Label();
             this.labelPlID = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelPlIDtitle
             // 
             this.labelPlIDtitle.AutoSize = true;
-            this.labelPlIDtitle.Location = new System.Drawing.Point(28, 33);
+            this.labelPlIDtitle.Location = new System.Drawing.Point(145, 153);
             this.labelPlIDtitle.Name = "labelPlIDtitle";
             this.labelPlIDtitle.Size = new System.Drawing.Size(98, 18);
             this.labelPlIDtitle.TabIndex = 0;
@@ -60,7 +64,7 @@
             // labelGenre
             // 
             this.labelGenre.AutoSize = true;
-            this.labelGenre.Location = new System.Drawing.Point(28, 119);
+            this.labelGenre.Location = new System.Drawing.Point(145, 239);
             this.labelGenre.Name = "labelGenre";
             this.labelGenre.Size = new System.Drawing.Size(63, 18);
             this.labelGenre.TabIndex = 2;
@@ -69,7 +73,7 @@
             // labelProduct
             // 
             this.labelProduct.AutoSize = true;
-            this.labelProduct.Location = new System.Drawing.Point(331, 122);
+            this.labelProduct.Location = new System.Drawing.Point(537, 239);
             this.labelProduct.Name = "labelProduct";
             this.labelProduct.Size = new System.Drawing.Size(62, 18);
             this.labelProduct.TabIndex = 4;
@@ -78,25 +82,25 @@
             // comboBoxSmallGenre
             // 
             this.comboBoxSmallGenre.FormattingEnabled = true;
-            this.comboBoxSmallGenre.Location = new System.Drawing.Point(132, 119);
+            this.comboBoxSmallGenre.Location = new System.Drawing.Point(249, 239);
             this.comboBoxSmallGenre.Name = "comboBoxSmallGenre";
-            this.comboBoxSmallGenre.Size = new System.Drawing.Size(121, 26);
+            this.comboBoxSmallGenre.Size = new System.Drawing.Size(215, 26);
             this.comboBoxSmallGenre.TabIndex = 5;
             this.comboBoxSmallGenre.SelectionChangeCommitted += new System.EventHandler(this.comboBoxSmallGenre_SelectionChangeCommitted);
             // 
             // comboBoxProduct
             // 
             this.comboBoxProduct.FormattingEnabled = true;
-            this.comboBoxProduct.Location = new System.Drawing.Point(435, 122);
+            this.comboBoxProduct.Location = new System.Drawing.Point(641, 239);
             this.comboBoxProduct.Name = "comboBoxProduct";
-            this.comboBoxProduct.Size = new System.Drawing.Size(121, 26);
+            this.comboBoxProduct.Size = new System.Drawing.Size(228, 26);
             this.comboBoxProduct.TabIndex = 6;
             this.comboBoxProduct.SelectionChangeCommitted += new System.EventHandler(this.comboBoxProduct_SelectionChangeCommitted);
             // 
             // labelPrice
             // 
             this.labelPrice.AutoSize = true;
-            this.labelPrice.Location = new System.Drawing.Point(654, 73);
+            this.labelPrice.Location = new System.Drawing.Point(920, 189);
             this.labelPrice.Name = "labelPrice";
             this.labelPrice.Size = new System.Drawing.Size(44, 18);
             this.labelPrice.TabIndex = 7;
@@ -104,14 +108,14 @@
             // 
             // textBoxPrice
             // 
-            this.textBoxPrice.Location = new System.Drawing.Point(755, 73);
+            this.textBoxPrice.Location = new System.Drawing.Point(1021, 189);
             this.textBoxPrice.Name = "textBoxPrice";
             this.textBoxPrice.Size = new System.Drawing.Size(183, 25);
             this.textBoxPrice.TabIndex = 8;
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(710, 210);
+            this.buttonDelete.Location = new System.Drawing.Point(976, 326);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(96, 44);
             this.buttonDelete.TabIndex = 15;
@@ -121,7 +125,7 @@
             // 
             // buttonUpdate
             // 
-            this.buttonUpdate.Location = new System.Drawing.Point(541, 210);
+            this.buttonUpdate.Location = new System.Drawing.Point(807, 326);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(102, 44);
             this.buttonUpdate.TabIndex = 14;
@@ -131,7 +135,7 @@
             // 
             // buttonRegester
             // 
-            this.buttonRegester.Location = new System.Drawing.Point(375, 210);
+            this.buttonRegester.Location = new System.Drawing.Point(641, 326);
             this.buttonRegester.Name = "buttonRegester";
             this.buttonRegester.Size = new System.Drawing.Size(94, 44);
             this.buttonRegester.TabIndex = 13;
@@ -142,27 +146,27 @@
             // dataGridViewDsp
             // 
             this.dataGridViewDsp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDsp.Location = new System.Drawing.Point(61, 312);
+            this.dataGridViewDsp.Location = new System.Drawing.Point(76, 390);
             this.dataGridViewDsp.Name = "dataGridViewDsp";
             this.dataGridViewDsp.RowHeadersWidth = 62;
             this.dataGridViewDsp.RowTemplate.Height = 27;
-            this.dataGridViewDsp.Size = new System.Drawing.Size(1246, 413);
+            this.dataGridViewDsp.Size = new System.Drawing.Size(1714, 413);
             this.dataGridViewDsp.TabIndex = 16;
             this.dataGridViewDsp.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDsp_CellClick);
             // 
             // comboBoxMaker
             // 
             this.comboBoxMaker.FormattingEnabled = true;
-            this.comboBoxMaker.Location = new System.Drawing.Point(435, 68);
+            this.comboBoxMaker.Location = new System.Drawing.Point(641, 185);
             this.comboBoxMaker.Name = "comboBoxMaker";
-            this.comboBoxMaker.Size = new System.Drawing.Size(140, 26);
+            this.comboBoxMaker.Size = new System.Drawing.Size(228, 26);
             this.comboBoxMaker.TabIndex = 18;
             this.comboBoxMaker.SelectionChangeCommitted += new System.EventHandler(this.comboBoxMaker_SelectionChangeCommitted);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(335, 77);
+            this.label1.Location = new System.Drawing.Point(541, 194);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 18);
             this.label1.TabIndex = 17;
@@ -171,16 +175,16 @@
             // comboBoxMajorGenre
             // 
             this.comboBoxMajorGenre.FormattingEnabled = true;
-            this.comboBoxMajorGenre.Location = new System.Drawing.Point(132, 73);
+            this.comboBoxMajorGenre.Location = new System.Drawing.Point(249, 193);
             this.comboBoxMajorGenre.Name = "comboBoxMajorGenre";
-            this.comboBoxMajorGenre.Size = new System.Drawing.Size(121, 26);
+            this.comboBoxMajorGenre.Size = new System.Drawing.Size(215, 26);
             this.comboBoxMajorGenre.TabIndex = 20;
             this.comboBoxMajorGenre.SelectionChangeCommitted += new System.EventHandler(this.comboBoxMajorGenre_SelectionChangeCommitted);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 76);
+            this.label2.Location = new System.Drawing.Point(145, 196);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 18);
             this.label2.TabIndex = 19;
@@ -189,27 +193,60 @@
             // labelStName
             // 
             this.labelStName.AutoSize = true;
-            this.labelStName.Location = new System.Drawing.Point(1245, 28);
+            this.labelStName.Font = new System.Drawing.Font("MS UI Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.labelStName.ForeColor = System.Drawing.Color.White;
+            this.labelStName.Location = new System.Drawing.Point(1714, 40);
             this.labelStName.Name = "labelStName";
-            this.labelStName.Size = new System.Drawing.Size(62, 18);
+            this.labelStName.Size = new System.Drawing.Size(76, 22);
             this.labelStName.TabIndex = 21;
             this.labelStName.Text = "店舗名";
             // 
             // labelPlID
             // 
             this.labelPlID.AutoSize = true;
-            this.labelPlID.Location = new System.Drawing.Point(145, 29);
+            this.labelPlID.Location = new System.Drawing.Point(411, 145);
             this.labelPlID.Name = "labelPlID";
             this.labelPlID.Size = new System.Drawing.Size(0, 18);
             this.labelPlID.TabIndex = 22;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("MS UI Gothic", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(120, 25);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(344, 52);
+            this.label3.TabIndex = 36;
+            this.label3.Text = "価格リスト管理";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.SeaGreen;
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.labelStName);
+            this.panel1.Location = new System.Drawing.Point(0, 26);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1943, 100);
+            this.panel1.TabIndex = 38;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(831, 827);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(0, 18);
+            this.label4.TabIndex = 39;
             // 
             // F_PriceList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1898, 1024);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1898, 854);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.labelPlID);
-            this.Controls.Add(this.labelStName);
             this.Controls.Add(this.comboBoxMajorGenre);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBoxMaker);
@@ -229,6 +266,8 @@
             this.Text = "価格リスト管理";
             this.Load += new System.EventHandler(this.F_PriceList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,5 +292,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelStName;
         private System.Windows.Forms.Label labelPlID;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label4;
     }
 }

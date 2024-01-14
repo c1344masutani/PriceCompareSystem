@@ -40,13 +40,16 @@
             this.dataGridViewDsp = new System.Windows.Forms.DataGridView();
             this.labelMaIDtitle = new System.Windows.Forms.Label();
             this.labelMaID = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelMaName
             // 
             this.labelMaName.AutoSize = true;
-            this.labelMaName.Location = new System.Drawing.Point(51, 84);
+            this.labelMaName.Location = new System.Drawing.Point(121, 180);
             this.labelMaName.Name = "labelMaName";
             this.labelMaName.Size = new System.Drawing.Size(81, 18);
             this.labelMaName.TabIndex = 0;
@@ -54,22 +57,22 @@
             // 
             // textBoxMaName
             // 
-            this.textBoxMaName.Location = new System.Drawing.Point(161, 77);
+            this.textBoxMaName.Location = new System.Drawing.Point(231, 173);
             this.textBoxMaName.Name = "textBoxMaName";
-            this.textBoxMaName.Size = new System.Drawing.Size(168, 25);
+            this.textBoxMaName.Size = new System.Drawing.Size(174, 25);
             this.textBoxMaName.TabIndex = 1;
             // 
             // textBoxMaAddress
             // 
-            this.textBoxMaAddress.Location = new System.Drawing.Point(161, 112);
+            this.textBoxMaAddress.Location = new System.Drawing.Point(231, 212);
             this.textBoxMaAddress.Name = "textBoxMaAddress";
-            this.textBoxMaAddress.Size = new System.Drawing.Size(168, 25);
+            this.textBoxMaAddress.Size = new System.Drawing.Size(469, 25);
             this.textBoxMaAddress.TabIndex = 2;
             // 
             // labelAddress
             // 
             this.labelAddress.AutoSize = true;
-            this.labelAddress.Location = new System.Drawing.Point(49, 119);
+            this.labelAddress.Location = new System.Drawing.Point(119, 215);
             this.labelAddress.Name = "labelAddress";
             this.labelAddress.Size = new System.Drawing.Size(44, 18);
             this.labelAddress.TabIndex = 3;
@@ -78,7 +81,7 @@
             // labelPhone
             // 
             this.labelPhone.AutoSize = true;
-            this.labelPhone.Location = new System.Drawing.Point(52, 173);
+            this.labelPhone.Location = new System.Drawing.Point(122, 269);
             this.labelPhone.Name = "labelPhone";
             this.labelPhone.Size = new System.Drawing.Size(80, 18);
             this.labelPhone.TabIndex = 4;
@@ -86,14 +89,14 @@
             // 
             // textBoxPhone
             // 
-            this.textBoxPhone.Location = new System.Drawing.Point(161, 165);
+            this.textBoxPhone.Location = new System.Drawing.Point(231, 261);
             this.textBoxPhone.Name = "textBoxPhone";
-            this.textBoxPhone.Size = new System.Drawing.Size(168, 25);
+            this.textBoxPhone.Size = new System.Drawing.Size(174, 25);
             this.textBoxPhone.TabIndex = 5;
             // 
             // buttonRegester
             // 
-            this.buttonRegester.Location = new System.Drawing.Point(138, 240);
+            this.buttonRegester.Location = new System.Drawing.Point(212, 336);
             this.buttonRegester.Name = "buttonRegester";
             this.buttonRegester.Size = new System.Drawing.Size(94, 44);
             this.buttonRegester.TabIndex = 6;
@@ -103,7 +106,7 @@
             // 
             // buttonUpdate
             // 
-            this.buttonUpdate.Location = new System.Drawing.Point(304, 240);
+            this.buttonUpdate.Location = new System.Drawing.Point(404, 336);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(102, 44);
             this.buttonUpdate.TabIndex = 8;
@@ -113,7 +116,7 @@
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(473, 240);
+            this.buttonDelete.Location = new System.Drawing.Point(604, 336);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(96, 44);
             this.buttonDelete.TabIndex = 9;
@@ -124,7 +127,7 @@
             // dataGridViewDsp
             // 
             this.dataGridViewDsp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDsp.Location = new System.Drawing.Point(21, 322);
+            this.dataGridViewDsp.Location = new System.Drawing.Point(91, 418);
             this.dataGridViewDsp.Name = "dataGridViewDsp";
             this.dataGridViewDsp.RowHeadersWidth = 62;
             this.dataGridViewDsp.RowTemplate.Height = 27;
@@ -135,7 +138,7 @@
             // labelMaIDtitle
             // 
             this.labelMaIDtitle.AutoSize = true;
-            this.labelMaIDtitle.Location = new System.Drawing.Point(49, 40);
+            this.labelMaIDtitle.Location = new System.Drawing.Point(119, 136);
             this.labelMaIDtitle.Name = "labelMaIDtitle";
             this.labelMaIDtitle.Size = new System.Drawing.Size(79, 18);
             this.labelMaIDtitle.TabIndex = 11;
@@ -144,16 +147,37 @@
             // labelMaID
             // 
             this.labelMaID.AutoSize = true;
-            this.labelMaID.Location = new System.Drawing.Point(158, 40);
+            this.labelMaID.Location = new System.Drawing.Point(228, 136);
             this.labelMaID.Name = "labelMaID";
             this.labelMaID.Size = new System.Drawing.Size(0, 18);
             this.labelMaID.TabIndex = 12;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(115, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(289, 52);
+            this.label2.TabIndex = 36;
+            this.label2.Text = "メーカー管理";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.SeaGreen;
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Location = new System.Drawing.Point(1, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1356, 100);
+            this.panel1.TabIndex = 38;
             // 
             // F_Maker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 964);
+            this.ClientSize = new System.Drawing.Size(1228, 964);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.labelMaID);
             this.Controls.Add(this.labelMaIDtitle);
             this.Controls.Add(this.dataGridViewDsp);
@@ -170,6 +194,8 @@
             this.Text = "メーカー管理";
             this.Load += new System.EventHandler(this.F_Maker_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,5 +215,7 @@
         private System.Windows.Forms.DataGridView dataGridViewDsp;
         private System.Windows.Forms.Label labelMaIDtitle;
         private System.Windows.Forms.Label labelMaID;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel1;
     }
 }

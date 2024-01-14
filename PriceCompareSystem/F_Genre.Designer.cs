@@ -39,12 +39,15 @@
             this.buttonMajorGenre = new System.Windows.Forms.Button();
             this.labelMajorGenre = new System.Windows.Forms.Label();
             this.labelGeID = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(526, 197);
+            this.buttonDelete.Location = new System.Drawing.Point(674, 302);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(109, 56);
             this.buttonDelete.TabIndex = 17;
@@ -54,7 +57,7 @@
             // 
             // buttonUpdate
             // 
-            this.buttonUpdate.Location = new System.Drawing.Point(383, 197);
+            this.buttonUpdate.Location = new System.Drawing.Point(496, 302);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(109, 56);
             this.buttonUpdate.TabIndex = 16;
@@ -64,7 +67,7 @@
             // 
             // buttonRegester
             // 
-            this.buttonRegester.Location = new System.Drawing.Point(236, 197);
+            this.buttonRegester.Location = new System.Drawing.Point(311, 302);
             this.buttonRegester.Name = "buttonRegester";
             this.buttonRegester.Size = new System.Drawing.Size(109, 56);
             this.buttonRegester.TabIndex = 15;
@@ -75,7 +78,7 @@
             // labelGeIDtitle
             // 
             this.labelGeIDtitle.AutoSize = true;
-            this.labelGeIDtitle.Location = new System.Drawing.Point(90, 66);
+            this.labelGeIDtitle.Location = new System.Drawing.Point(152, 163);
             this.labelGeIDtitle.Name = "labelGeIDtitle";
             this.labelGeIDtitle.Size = new System.Drawing.Size(79, 18);
             this.labelGeIDtitle.TabIndex = 18;
@@ -83,15 +86,15 @@
             // 
             // textBoxGeName
             // 
-            this.textBoxGeName.Location = new System.Drawing.Point(206, 153);
+            this.textBoxGeName.Location = new System.Drawing.Point(268, 251);
             this.textBoxGeName.Name = "textBoxGeName";
-            this.textBoxGeName.Size = new System.Drawing.Size(171, 25);
+            this.textBoxGeName.Size = new System.Drawing.Size(225, 25);
             this.textBoxGeName.TabIndex = 21;
             // 
             // labelName
             // 
             this.labelName.AutoSize = true;
-            this.labelName.Location = new System.Drawing.Point(90, 161);
+            this.labelName.Location = new System.Drawing.Point(152, 258);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(81, 18);
             this.labelName.TabIndex = 20;
@@ -100,7 +103,7 @@
             // dataGridViewDsp
             // 
             this.dataGridViewDsp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDsp.Location = new System.Drawing.Point(93, 282);
+            this.dataGridViewDsp.Location = new System.Drawing.Point(155, 379);
             this.dataGridViewDsp.Name = "dataGridViewDsp";
             this.dataGridViewDsp.RowHeadersWidth = 62;
             this.dataGridViewDsp.RowTemplate.Height = 27;
@@ -111,14 +114,14 @@
             // comboBoxMajorGenre
             // 
             this.comboBoxMajorGenre.FormattingEnabled = true;
-            this.comboBoxMajorGenre.Location = new System.Drawing.Point(206, 110);
+            this.comboBoxMajorGenre.Location = new System.Drawing.Point(268, 207);
             this.comboBoxMajorGenre.Name = "comboBoxMajorGenre";
             this.comboBoxMajorGenre.Size = new System.Drawing.Size(121, 26);
             this.comboBoxMajorGenre.TabIndex = 23;
             // 
             // buttonMajorGenre
             // 
-            this.buttonMajorGenre.Location = new System.Drawing.Point(345, 87);
+            this.buttonMajorGenre.Location = new System.Drawing.Point(407, 184);
             this.buttonMajorGenre.Name = "buttonMajorGenre";
             this.buttonMajorGenre.Size = new System.Drawing.Size(86, 49);
             this.buttonMajorGenre.TabIndex = 24;
@@ -129,7 +132,7 @@
             // labelMajorGenre
             // 
             this.labelMajorGenre.AutoSize = true;
-            this.labelMajorGenre.Location = new System.Drawing.Point(88, 113);
+            this.labelMajorGenre.Location = new System.Drawing.Point(150, 210);
             this.labelMajorGenre.Name = "labelMajorGenre";
             this.labelMajorGenre.Size = new System.Drawing.Size(81, 18);
             this.labelMajorGenre.TabIndex = 25;
@@ -138,16 +141,37 @@
             // labelGeID
             // 
             this.labelGeID.AutoSize = true;
-            this.labelGeID.Location = new System.Drawing.Point(206, 65);
+            this.labelGeID.Location = new System.Drawing.Point(268, 162);
             this.labelGeID.Name = "labelGeID";
             this.labelGeID.Size = new System.Drawing.Size(0, 18);
             this.labelGeID.TabIndex = 26;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(144, 26);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(290, 52);
+            this.label2.TabIndex = 36;
+            this.label2.Text = "ジャンル管理";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.SeaGreen;
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Location = new System.Drawing.Point(2, 28);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1356, 100);
+            this.panel1.TabIndex = 38;
             // 
             // F_Genre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1898, 1024);
+            this.ClientSize = new System.Drawing.Size(1262, 1024);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.labelGeID);
             this.Controls.Add(this.labelMajorGenre);
             this.Controls.Add(this.buttonMajorGenre);
@@ -163,6 +187,8 @@
             this.Text = "ジャンル管理";
             this.Load += new System.EventHandler(this.F_Genre_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -181,5 +207,7 @@
         private System.Windows.Forms.Button buttonMajorGenre;
         private System.Windows.Forms.Label labelMajorGenre;
         private System.Windows.Forms.Label labelGeID;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel1;
     }
 }

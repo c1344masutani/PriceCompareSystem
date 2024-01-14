@@ -15,6 +15,7 @@ namespace PriceCompareSystem
         public F_Login()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void buttonLogin_Click(object sender, EventArgs e)
@@ -52,8 +53,6 @@ namespace PriceCompareSystem
                         Form frm = new F_PriceList();
 
                         Opacity = 0;
-
-                        frm.WindowState = FormWindowState.Maximized;
                         frm.ShowDialog();
 
 

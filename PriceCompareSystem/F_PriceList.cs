@@ -47,6 +47,7 @@ namespace PriceCompareSystem
         public F_PriceList()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void SetFormCombBox()

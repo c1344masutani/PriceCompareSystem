@@ -60,6 +60,7 @@
             this.dataGridViewReview = new System.Windows.Forms.DataGridView();
             this.buttonReview = new System.Windows.Forms.Button();
             this.labelReviewScore = new System.Windows.Forms.Label();
+            this.buttonCancel = new System.Windows.Forms.Button();
             this.panelReview.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewReview)).BeginInit();
@@ -86,23 +87,23 @@
             // labelProduct
             // 
             this.labelProduct.AutoSize = true;
-            this.labelProduct.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.labelProduct.Location = new System.Drawing.Point(437, 127);
+            this.labelProduct.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.labelProduct.Location = new System.Drawing.Point(436, 121);
             this.labelProduct.Name = "labelProduct";
-            this.labelProduct.Size = new System.Drawing.Size(58, 18);
+            this.labelProduct.Size = new System.Drawing.Size(73, 24);
             this.labelProduct.TabIndex = 2;
             this.labelProduct.Text = "label1";
             // 
             // labelPrice
             // 
             this.labelPrice.AutoSize = true;
-            this.labelPrice.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.labelPrice.Font = new System.Drawing.Font("MS UI Gothic", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.labelPrice.ForeColor = System.Drawing.Color.Red;
             this.labelPrice.Location = new System.Drawing.Point(758, 45);
             this.labelPrice.Name = "labelPrice";
-            this.labelPrice.Size = new System.Drawing.Size(98, 33);
+            this.labelPrice.Size = new System.Drawing.Size(88, 44);
             this.labelPrice.TabIndex = 3;
-            this.labelPrice.Text = "label1";
+            this.labelPrice.Text = "000";
             // 
             // labelStore
             // 
@@ -152,7 +153,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(649, 58);
+            this.label4.Location = new System.Drawing.Point(663, 68);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 18);
             this.label4.TabIndex = 9;
@@ -180,7 +181,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label7.Location = new System.Drawing.Point(862, 43);
+            this.label7.Location = new System.Drawing.Point(895, 55);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(48, 33);
             this.label7.TabIndex = 12;
@@ -198,7 +199,7 @@
             // labelAddress
             // 
             this.labelAddress.AutoSize = true;
-            this.labelAddress.Location = new System.Drawing.Point(138, 293);
+            this.labelAddress.Location = new System.Drawing.Point(23, 328);
             this.labelAddress.Name = "labelAddress";
             this.labelAddress.Size = new System.Drawing.Size(52, 18);
             this.labelAddress.TabIndex = 14;
@@ -207,11 +208,12 @@
             // labelCount
             // 
             this.labelCount.AutoSize = true;
-            this.labelCount.Location = new System.Drawing.Point(852, 103);
+            this.labelCount.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.labelCount.Location = new System.Drawing.Point(711, 111);
             this.labelCount.Name = "labelCount";
-            this.labelCount.Size = new System.Drawing.Size(52, 18);
+            this.labelCount.Size = new System.Drawing.Size(214, 18);
             this.labelCount.TabIndex = 15;
-            this.labelCount.Text = "label9";
+            this.labelCount.Text = "取り扱い店舗 0店舗中0位";
             // 
             // labeltest
             // 
@@ -223,15 +225,16 @@
             // 
             // panelReview
             // 
+            this.panelReview.Controls.Add(this.buttonCancel);
             this.panelReview.Controls.Add(this.panel2);
             this.panelReview.Controls.Add(this.buttonSend);
             this.panelReview.Controls.Add(this.textBoxReview);
             this.panelReview.Controls.Add(this.label10);
             this.panelReview.Controls.Add(this.textBoxTitle);
             this.panelReview.Controls.Add(this.label9);
-            this.panelReview.Location = new System.Drawing.Point(273, 223);
+            this.panelReview.Location = new System.Drawing.Point(283, 222);
             this.panelReview.Name = "panelReview";
-            this.panelReview.Size = new System.Drawing.Size(521, 299);
+            this.panelReview.Size = new System.Drawing.Size(716, 299);
             this.panelReview.TabIndex = 17;
             // 
             // panel2
@@ -368,17 +371,27 @@
             // 
             this.labelReviewScore.AutoSize = true;
             this.labelReviewScore.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.labelReviewScore.Location = new System.Drawing.Point(267, 223);
+            this.labelReviewScore.Location = new System.Drawing.Point(277, 222);
             this.labelReviewScore.Name = "labelReviewScore";
             this.labelReviewScore.Size = new System.Drawing.Size(120, 36);
             this.labelReviewScore.TabIndex = 20;
             this.labelReviewScore.Text = "label11";
             // 
+            // buttonCancel
+            // 
+            this.buttonCancel.Location = new System.Drawing.Point(506, 27);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(80, 51);
+            this.buttonCancel.TabIndex = 21;
+            this.buttonCancel.Text = "キャンセル";
+            this.buttonCancel.UseVisualStyleBackColor = true;
+            // 
             // F_Result
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1291, 562);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1309, 562);
             this.Controls.Add(this.labelReviewScore);
             this.Controls.Add(this.buttonReview);
             this.Controls.Add(this.dataGridViewReview);
@@ -447,5 +460,6 @@
         private System.Windows.Forms.DataGridView dataGridViewReview;
         private System.Windows.Forms.Button buttonReview;
         private System.Windows.Forms.Label labelReviewScore;
+        private System.Windows.Forms.Button buttonCancel;
     }
 }

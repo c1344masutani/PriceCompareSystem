@@ -20,20 +20,34 @@ namespace PriceCompareSystem
 
         private void buttonAdmin_Click(object sender, EventArgs e)
         {
+            Opacity = 0;
             F_Login f_Login = new F_Login();
             f_Login.ShowDialog();
+            f_Login.Dispose();
         }
 
         private void buttonEasySearch_Click(object sender, EventArgs e)
         {
+            Opacity = 0;
             F_EasySearch f_EasySearch = new F_EasySearch();
             f_EasySearch.ShowDialog();
+            f_EasySearch.Dispose();
         }
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
+            Opacity = 0;
             F_Serach f_Serach = new F_Serach();
             f_Serach.ShowDialog();
+            f_Serach.Dispose();
+        }
+
+        private void F_Menu_Activated(object sender, EventArgs e)
+        {
+            if (Opacity == 0)
+            {
+                Opacity = 1;
+            }
         }
     }
 }

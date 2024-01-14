@@ -36,13 +36,16 @@
             this.buttonRegester = new System.Windows.Forms.Button();
             this.dataGridViewDsp = new System.Windows.Forms.DataGridView();
             this.labelMgID = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelMgIDtitle
             // 
             this.labelMgIDtitle.AutoSize = true;
-            this.labelMgIDtitle.Location = new System.Drawing.Point(32, 36);
+            this.labelMgIDtitle.Location = new System.Drawing.Point(37, 115);
             this.labelMgIDtitle.Name = "labelMgIDtitle";
             this.labelMgIDtitle.Size = new System.Drawing.Size(97, 18);
             this.labelMgIDtitle.TabIndex = 20;
@@ -51,7 +54,7 @@
             // labelMgName
             // 
             this.labelMgName.AutoSize = true;
-            this.labelMgName.Location = new System.Drawing.Point(32, 89);
+            this.labelMgName.Location = new System.Drawing.Point(37, 168);
             this.labelMgName.Name = "labelMgName";
             this.labelMgName.Size = new System.Drawing.Size(99, 18);
             this.labelMgName.TabIndex = 22;
@@ -59,14 +62,14 @@
             // 
             // textBoxMgName
             // 
-            this.textBoxMgName.Location = new System.Drawing.Point(148, 81);
+            this.textBoxMgName.Location = new System.Drawing.Point(153, 160);
             this.textBoxMgName.Name = "textBoxMgName";
             this.textBoxMgName.Size = new System.Drawing.Size(100, 25);
             this.textBoxMgName.TabIndex = 23;
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(429, 162);
+            this.buttonDelete.Location = new System.Drawing.Point(434, 211);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(109, 56);
             this.buttonDelete.TabIndex = 26;
@@ -76,7 +79,7 @@
             // 
             // buttonUpdate
             // 
-            this.buttonUpdate.Location = new System.Drawing.Point(286, 162);
+            this.buttonUpdate.Location = new System.Drawing.Point(291, 211);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(109, 56);
             this.buttonUpdate.TabIndex = 25;
@@ -86,7 +89,7 @@
             // 
             // buttonRegester
             // 
-            this.buttonRegester.Location = new System.Drawing.Point(139, 162);
+            this.buttonRegester.Location = new System.Drawing.Point(144, 211);
             this.buttonRegester.Name = "buttonRegester";
             this.buttonRegester.Size = new System.Drawing.Size(109, 56);
             this.buttonRegester.TabIndex = 24;
@@ -97,7 +100,7 @@
             // dataGridViewDsp
             // 
             this.dataGridViewDsp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDsp.Location = new System.Drawing.Point(77, 234);
+            this.dataGridViewDsp.Location = new System.Drawing.Point(82, 283);
             this.dataGridViewDsp.Name = "dataGridViewDsp";
             this.dataGridViewDsp.RowHeadersWidth = 62;
             this.dataGridViewDsp.RowTemplate.Height = 27;
@@ -108,16 +111,37 @@
             // labelMgID
             // 
             this.labelMgID.AutoSize = true;
-            this.labelMgID.Location = new System.Drawing.Point(148, 36);
+            this.labelMgID.Location = new System.Drawing.Point(153, 115);
             this.labelMgID.Name = "labelMgID";
             this.labelMgID.Size = new System.Drawing.Size(0, 18);
             this.labelMgID.TabIndex = 28;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(32, 18);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(266, 40);
+            this.label2.TabIndex = 36;
+            this.label2.Text = "大ジャンル管理";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.SeaGreen;
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Location = new System.Drawing.Point(1, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(844, 70);
+            this.panel1.TabIndex = 38;
             // 
             // F_MajorGenre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 541);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.labelMgID);
             this.Controls.Add(this.dataGridViewDsp);
             this.Controls.Add(this.buttonDelete);
@@ -130,6 +154,8 @@
             this.Text = "大ジャンル管理";
             this.Load += new System.EventHandler(this.F_MajorGenre_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,5 +170,7 @@
         private System.Windows.Forms.Button buttonRegester;
         private System.Windows.Forms.DataGridView dataGridViewDsp;
         private System.Windows.Forms.Label labelMgID;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel1;
     }
 }
