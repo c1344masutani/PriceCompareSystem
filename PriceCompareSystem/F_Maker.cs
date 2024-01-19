@@ -19,6 +19,14 @@ namespace PriceCompareSystem
             this.StartPosition = FormStartPosition.CenterScreen;
         }
 
+        private void AllClear()
+        {
+            labelMaID.Text = "";
+            textBoxMaName.Text = "";
+            textBoxMaAddress.Text = "";
+            textBoxPhone.Text = "";
+        }
+
         private void fncAllSelect()
         {
             dataGridViewDsp.Rows.Clear();
@@ -96,6 +104,7 @@ namespace PriceCompareSystem
                 context.SaveChanges();
                 context.Dispose();
                 fncAllSelect();
+                AllClear();
                 MessageBox.Show("登録完了");
             }
             catch (Exception ex)
@@ -144,6 +153,7 @@ namespace PriceCompareSystem
                 context.SaveChanges();
                 context.Dispose();
                 fncAllSelect();
+                AllClear(); 
                 MessageBox.Show("更新完了");
             }
             catch (Exception ex)
@@ -173,6 +183,7 @@ namespace PriceCompareSystem
                 context.SaveChanges();
                 context.Dispose();
                 fncAllSelect();
+                AllClear();
                 MessageBox.Show("削除完了");
             }
             catch (Exception ex)
@@ -190,9 +201,9 @@ namespace PriceCompareSystem
             dataGridViewDsp.Columns[0].HeaderText = "メーカーID";
             dataGridViewDsp.Columns[1].Width = 130;
             dataGridViewDsp.Columns[1].HeaderText = "メーカー名";
-            dataGridViewDsp.Columns[2].Width = 200;
+            dataGridViewDsp.Columns[2].Width = 250;
             dataGridViewDsp.Columns[2].HeaderText = "住所";
-            dataGridViewDsp.Columns[3].Width = 130;
+            dataGridViewDsp.Columns[3].Width = 150;
             dataGridViewDsp.Columns[3].HeaderText = "電話番号";
             //選択モードを行単位
             dataGridViewDsp.SelectionMode = DataGridViewSelectionMode.FullRowSelect;

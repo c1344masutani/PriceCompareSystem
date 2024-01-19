@@ -207,13 +207,13 @@ namespace PriceCompareSystem
             dataGridViewDsp.Columns[1].HeaderText = "ジャンル";
             dataGridViewDsp.Columns[2].Width = 130;
             dataGridViewDsp.Columns[2].HeaderText = "メーカー";
-            dataGridViewDsp.Columns[3].Width = 130;
+            dataGridViewDsp.Columns[3].Width = 150;
             dataGridViewDsp.Columns[3].HeaderText = "商品名";
             dataGridViewDsp.Columns[4].Width = 80;
             dataGridViewDsp.Columns[4].HeaderText = "価格";
-            dataGridViewDsp.Columns[5].Width = 130;
+            dataGridViewDsp.Columns[5].Width = 150;
             dataGridViewDsp.Columns[5].HeaderText = "店舗名";
-            dataGridViewDsp.Columns[6].Width = 70;
+            dataGridViewDsp.Columns[6].Width = 130;
             dataGridViewDsp.Columns[6].HeaderText = "都道府県";
             //選択モードを行単位
             dataGridViewDsp.SelectionMode = DataGridViewSelectionMode.FullRowSelect;

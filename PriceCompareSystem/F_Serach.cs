@@ -125,15 +125,15 @@ namespace PriceCompareSystem
             //列数の指定
             dataGridViewDsp.ColumnCount = 6;
 
-            dataGridViewDsp.Columns[0].Width = 80;
+            dataGridViewDsp.Columns[0].Width = 130;
             dataGridViewDsp.Columns[0].HeaderText = "ジャンル";
             dataGridViewDsp.Columns[1].Width = 130;
             dataGridViewDsp.Columns[1].HeaderText = "メーカー";
-            dataGridViewDsp.Columns[2].Width = 130;
+            dataGridViewDsp.Columns[2].Width = 200;
             dataGridViewDsp.Columns[2].HeaderText = "商品名";
             dataGridViewDsp.Columns[3].Width = 70;
             dataGridViewDsp.Columns[3].HeaderText = "価格";
-            dataGridViewDsp.Columns[4].Width = 130;
+            dataGridViewDsp.Columns[4].Width = 150;
             dataGridViewDsp.Columns[4].HeaderText = "店舗名";
             dataGridViewDsp.Columns[5].Width = 130;
             dataGridViewDsp.Columns[5].HeaderText = "都道府県";
@@ -184,11 +184,11 @@ namespace PriceCompareSystem
                          join t6 in context.M_Stores
                          on t1.StID equals t6.StID
                          orderby t1.Price ,t2.PrName
-                         where t1.PrID.ToString().Contains(prid) &&
-                               t1.MaID.ToString().Contains(maid) &&
-                               t1.PrID.ToString().Contains(prid) &&
-                               t1.GeID.ToString().Contains(geid) &&
-                               t1.PfID.ToString().Contains(pfid)
+                         where t1.PrID.ToString() == prid ||
+                               t1.MaID.ToString() == maid ||
+                               t1.PrID.ToString() == prid ||
+                               t1.GeID.ToString() == geid ||
+                               t1.PfID.ToString() == pfid
                          select new
                          {
                              t4.SgName,
@@ -207,6 +207,13 @@ namespace PriceCompareSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            //価格で昇順に並び替え
+            if (dataGridViewDsp.CurrentCell != null)
+            {
+                dataGridViewDsp.Sort(dataGridViewDsp.Columns[3], System.ComponentModel.ListSortDirection.Ascending);
+                dataGridViewDsp.CurrentCell = dataGridViewDsp[0, 0];
             }
         }
 

@@ -21,6 +21,7 @@ namespace PriceCompareSystem
 
         public F_Store()
         {
+            this.StartPosition = FormStartPosition.CenterScreen;
             InitializeComponent();
         }
 
@@ -37,6 +38,17 @@ namespace PriceCompareSystem
             comboBoxPrefectures.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxPrefectures.SelectedIndex = -1;
             
+        }
+
+        private void AllClear()
+        {
+            labelStID.Text = "";
+            textBoxStName.Text = "";
+            comboBoxRegion.SelectedIndex = -1;
+            comboBoxPrefectures.SelectedIndex = -1;
+            textBoxAddress.Text = "";
+            textBoxPhone.Text = "";
+            textBoxPassWord.Text = "";
         }
 
         private void fncAllSelect()
@@ -144,6 +156,7 @@ namespace PriceCompareSystem
                 context.SaveChanges();
                 context.Dispose();
                 fncAllSelect();
+                AllClear();
                 MessageBox.Show("登録完了");
             }
             catch (Exception ex)
@@ -163,7 +176,7 @@ namespace PriceCompareSystem
             dataGridViewDsp.Columns[1].HeaderText = "店舗名";
             dataGridViewDsp.Columns[2].Width = 80;
             dataGridViewDsp.Columns[2].HeaderText = "都道府県";
-            dataGridViewDsp.Columns[3].Width = 130;
+            dataGridViewDsp.Columns[3].Width = 200;
             dataGridViewDsp.Columns[3].HeaderText = "住所";
             dataGridViewDsp.Columns[4].Width = 130;
             dataGridViewDsp.Columns[4].HeaderText = "電話番号";
@@ -244,6 +257,7 @@ namespace PriceCompareSystem
                 context.SaveChanges();
                 context.Dispose();
                 fncAllSelect();
+                AllClear();
                 MessageBox.Show("更新完了");
             }
             catch (Exception ex)
@@ -273,6 +287,7 @@ namespace PriceCompareSystem
                 context.SaveChanges();
                 context.Dispose();
                 fncAllSelect();
+                AllClear();
                 MessageBox.Show("削除完了");
             }
             catch (Exception ex)
@@ -300,6 +315,11 @@ namespace PriceCompareSystem
             comboBoxPrefectures.ValueMember = "PfID";
             comboBoxPrefectures.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxPrefectures.SelectedIndex = -1;
+        }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            AllClear();
         }
     }
 }

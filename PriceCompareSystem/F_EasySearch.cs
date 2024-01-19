@@ -76,10 +76,8 @@ namespace PriceCompareSystem
                          join t6 in context.M_Stores
                          on t1.StID equals t6.StID
                          orderby t1.Price, t2.PrName
-                         where t2.PrName.Contains(kewword) ||
-                               t3.MaName.Contains(kewword) ||
-                               t4.SgName.Contains(kewword) &&
-                               t5.PfID.ToString().Contains(pfid)
+                         where t1.PfID.ToString().Contains(pfid) &&
+                               t2.PrName.Contains(kewword)
                          select new
                          {
                              t4.SgName,
@@ -93,11 +91,75 @@ namespace PriceCompareSystem
                 {
                     dataGridViewDsp.Rows.Add(p.SgName, p.MaName, p.PrName, p.Price, p.StName, p.PfName);
                 }
+                
+                tb = from t1 in context.M_PriceLists
+                     join t2 in context.M_Products
+                     on t1.PrID equals t2.PrID
+                     join t3 in context.M_Makers
+                     on t1.MaID equals t3.MaID
+                     join t4 in context.M_SmallGenres
+                     on t1.GeID equals t4.SgID
+                     join t5 in context.M_Prefectures
+                     on t1.PfID equals t5.PfID
+                     join t6 in context.M_Stores
+                     on t1.StID equals t6.StID
+                     orderby t1.Price, t2.PrName
+                     where t1.PfID.ToString().Contains(pfid) &&
+                           t3.MaName.Contains(kewword)
+                     select new
+                     {
+                         t4.SgName,
+                         t3.MaName,
+                         t2.PrName,
+                         t1.Price,
+                         t6.StName,
+                         t5.PfName
+                     };
+                foreach (var p in tb)
+                {
+                    dataGridViewDsp.Rows.Add(p.SgName, p.MaName, p.PrName, p.Price, p.StName, p.PfName);
+                }
+
+                tb = from t1 in context.M_PriceLists
+                     join t2 in context.M_Products
+                     on t1.PrID equals t2.PrID
+                     join t3 in context.M_Makers
+                     on t1.MaID equals t3.MaID
+                     join t4 in context.M_SmallGenres
+                     on t1.GeID equals t4.SgID
+                     join t5 in context.M_Prefectures
+                     on t1.PfID equals t5.PfID
+                     join t6 in context.M_Stores
+                     on t1.StID equals t6.StID
+                     orderby t1.Price, t2.PrName
+                     where t1.PfID.ToString().Contains(pfid) &&
+                           t4.SgName.Contains(kewword)
+                     select new
+                     {
+                         t4.SgName,
+                         t3.MaName,
+                         t2.PrName,
+                         t1.Price,
+                         t6.StName,
+                         t5.PfName
+                     };
+                foreach (var p in tb)
+                {
+                    dataGridViewDsp.Rows.Add(p.SgName, p.MaName, p.PrName, p.Price, p.StName, p.PfName);
+                }
+
                 context.Dispose();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            //価格で昇順に並び替え
+            if(dataGridViewDsp.CurrentCell != null)
+            {
+                dataGridViewDsp.Sort(dataGridViewDsp.Columns[3], System.ComponentModel.ListSortDirection.Ascending);
+                dataGridViewDsp.CurrentCell = dataGridViewDsp[0, 0];
             }
         }
 

@@ -47,6 +47,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.buttonClear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -62,9 +63,9 @@
             // 
             // textBoxPrName
             // 
-            this.textBoxPrName.Location = new System.Drawing.Point(487, 239);
+            this.textBoxPrName.Location = new System.Drawing.Point(454, 239);
             this.textBoxPrName.Name = "textBoxPrName";
-            this.textBoxPrName.Size = new System.Drawing.Size(140, 25);
+            this.textBoxPrName.Size = new System.Drawing.Size(173, 25);
             this.textBoxPrName.TabIndex = 1;
             // 
             // label1
@@ -79,9 +80,9 @@
             // comboBoxMaker
             // 
             this.comboBoxMaker.FormattingEnabled = true;
-            this.comboBoxMaker.Location = new System.Drawing.Point(487, 189);
+            this.comboBoxMaker.Location = new System.Drawing.Point(454, 189);
             this.comboBoxMaker.Name = "comboBoxMaker";
-            this.comboBoxMaker.Size = new System.Drawing.Size(140, 26);
+            this.comboBoxMaker.Size = new System.Drawing.Size(173, 26);
             this.comboBoxMaker.TabIndex = 3;
             // 
             // labelPrPrice
@@ -95,9 +96,9 @@
             // 
             // textBoxPrPrice
             // 
-            this.textBoxPrPrice.Location = new System.Drawing.Point(462, 291);
+            this.textBoxPrPrice.Location = new System.Drawing.Point(487, 291);
             this.textBoxPrPrice.Name = "textBoxPrPrice";
-            this.textBoxPrPrice.Size = new System.Drawing.Size(165, 25);
+            this.textBoxPrPrice.Size = new System.Drawing.Size(140, 25);
             this.textBoxPrPrice.TabIndex = 5;
             // 
             // buttonRegester
@@ -112,6 +113,7 @@
             // 
             // dataGridViewDsp
             // 
+            this.dataGridViewDsp.AllowUserToAddRows = false;
             this.dataGridViewDsp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDsp.Location = new System.Drawing.Point(70, 417);
             this.dataGridViewDsp.Name = "dataGridViewDsp";
@@ -223,12 +225,24 @@
             this.label5.Size = new System.Drawing.Size(0, 18);
             this.label5.TabIndex = 40;
             // 
+            // buttonClear
+            // 
+            this.buttonClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonClear.Location = new System.Drawing.Point(172, 147);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(102, 58);
+            this.buttonClear.TabIndex = 41;
+            this.buttonClear.Text = "入力クリア";
+            this.buttonClear.UseVisualStyleBackColor = false;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
+            // 
             // F_Product
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1355, 967);
+            this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.labelPrID);
@@ -279,5 +293,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button buttonClear;
     }
 }

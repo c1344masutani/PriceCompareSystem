@@ -57,6 +57,9 @@
             this.comboBoxRegion = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.buttonClear = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.prefectureBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.priceCompareSystemDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.priceCompareSystemDataSet)).BeginInit();
@@ -78,7 +81,7 @@
             // 
             // textBoxStName
             // 
-            this.textBoxStName.Location = new System.Drawing.Point(249, 155);
+            this.textBoxStName.Location = new System.Drawing.Point(427, 173);
             this.textBoxStName.Name = "textBoxStName";
             this.textBoxStName.Size = new System.Drawing.Size(203, 25);
             this.textBoxStName.TabIndex = 3;
@@ -86,7 +89,7 @@
             // labelStName
             // 
             this.labelStName.AutoSize = true;
-            this.labelStName.Location = new System.Drawing.Point(147, 162);
+            this.labelStName.Location = new System.Drawing.Point(325, 180);
             this.labelStName.Name = "labelStName";
             this.labelStName.Size = new System.Drawing.Size(62, 18);
             this.labelStName.TabIndex = 2;
@@ -94,15 +97,15 @@
             // 
             // textBoxAddress
             // 
-            this.textBoxAddress.Location = new System.Drawing.Point(249, 253);
+            this.textBoxAddress.Location = new System.Drawing.Point(427, 271);
             this.textBoxAddress.Name = "textBoxAddress";
-            this.textBoxAddress.Size = new System.Drawing.Size(201, 25);
+            this.textBoxAddress.Size = new System.Drawing.Size(462, 25);
             this.textBoxAddress.TabIndex = 5;
             // 
             // labelAddress
             // 
             this.labelAddress.AutoSize = true;
-            this.labelAddress.Location = new System.Drawing.Point(149, 260);
+            this.labelAddress.Location = new System.Drawing.Point(327, 278);
             this.labelAddress.Name = "labelAddress";
             this.labelAddress.Size = new System.Drawing.Size(44, 18);
             this.labelAddress.TabIndex = 4;
@@ -111,7 +114,7 @@
             // labelPrefectures
             // 
             this.labelPrefectures.AutoSize = true;
-            this.labelPrefectures.Location = new System.Drawing.Point(463, 216);
+            this.labelPrefectures.Location = new System.Drawing.Point(641, 234);
             this.labelPrefectures.Name = "labelPrefectures";
             this.labelPrefectures.Size = new System.Drawing.Size(80, 18);
             this.labelPrefectures.TabIndex = 6;
@@ -120,7 +123,7 @@
             // comboBoxPrefectures
             // 
             this.comboBoxPrefectures.FormattingEnabled = true;
-            this.comboBoxPrefectures.Location = new System.Drawing.Point(562, 207);
+            this.comboBoxPrefectures.Location = new System.Drawing.Point(740, 225);
             this.comboBoxPrefectures.Name = "comboBoxPrefectures";
             this.comboBoxPrefectures.Size = new System.Drawing.Size(149, 26);
             this.comboBoxPrefectures.TabIndex = 7;
@@ -137,7 +140,7 @@
             // 
             // textBoxPhone
             // 
-            this.textBoxPhone.Location = new System.Drawing.Point(249, 311);
+            this.textBoxPhone.Location = new System.Drawing.Point(427, 329);
             this.textBoxPhone.Name = "textBoxPhone";
             this.textBoxPhone.Size = new System.Drawing.Size(201, 25);
             this.textBoxPhone.TabIndex = 9;
@@ -145,7 +148,7 @@
             // labelPhone
             // 
             this.labelPhone.AutoSize = true;
-            this.labelPhone.Location = new System.Drawing.Point(147, 318);
+            this.labelPhone.Location = new System.Drawing.Point(325, 336);
             this.labelPhone.Name = "labelPhone";
             this.labelPhone.Size = new System.Drawing.Size(80, 18);
             this.labelPhone.TabIndex = 8;
@@ -153,7 +156,7 @@
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(562, 373);
+            this.buttonDelete.Location = new System.Drawing.Point(740, 391);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(109, 56);
             this.buttonDelete.TabIndex = 14;
@@ -163,7 +166,7 @@
             // 
             // buttonUpdate
             // 
-            this.buttonUpdate.Location = new System.Drawing.Point(419, 373);
+            this.buttonUpdate.Location = new System.Drawing.Point(597, 391);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(109, 56);
             this.buttonUpdate.TabIndex = 13;
@@ -173,7 +176,7 @@
             // 
             // buttonRegester
             // 
-            this.buttonRegester.Location = new System.Drawing.Point(272, 373);
+            this.buttonRegester.Location = new System.Drawing.Point(450, 391);
             this.buttonRegester.Name = "buttonRegester";
             this.buttonRegester.Size = new System.Drawing.Size(109, 56);
             this.buttonRegester.TabIndex = 12;
@@ -211,20 +214,21 @@
             // 
             // dataGridViewDsp
             // 
+            this.dataGridViewDsp.AllowUserToAddRows = false;
             this.dataGridViewDsp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDsp.Location = new System.Drawing.Point(153, 453);
             this.dataGridViewDsp.Name = "dataGridViewDsp";
             this.dataGridViewDsp.RowHeadersVisible = false;
             this.dataGridViewDsp.RowHeadersWidth = 62;
             this.dataGridViewDsp.RowTemplate.Height = 27;
-            this.dataGridViewDsp.Size = new System.Drawing.Size(1028, 413);
+            this.dataGridViewDsp.Size = new System.Drawing.Size(1028, 401);
             this.dataGridViewDsp.TabIndex = 15;
             this.dataGridViewDsp.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDsp_CellClick);
             // 
             // labelPW
             // 
             this.labelPW.AutoSize = true;
-            this.labelPW.Location = new System.Drawing.Point(518, 315);
+            this.labelPW.Location = new System.Drawing.Point(696, 333);
             this.labelPW.Name = "labelPW";
             this.labelPW.Size = new System.Drawing.Size(79, 18);
             this.labelPW.TabIndex = 16;
@@ -232,7 +236,7 @@
             // 
             // textBoxPassWord
             // 
-            this.textBoxPassWord.Location = new System.Drawing.Point(624, 315);
+            this.textBoxPassWord.Location = new System.Drawing.Point(802, 333);
             this.textBoxPassWord.Name = "textBoxPassWord";
             this.textBoxPassWord.Size = new System.Drawing.Size(225, 25);
             this.textBoxPassWord.TabIndex = 17;
@@ -240,7 +244,7 @@
             // labelStID
             // 
             this.labelStID.AutoSize = true;
-            this.labelStID.Location = new System.Drawing.Point(246, 107);
+            this.labelStID.Location = new System.Drawing.Point(424, 143);
             this.labelStID.Name = "labelStID";
             this.labelStID.Size = new System.Drawing.Size(0, 18);
             this.labelStID.TabIndex = 18;
@@ -248,7 +252,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(149, 215);
+            this.label1.Location = new System.Drawing.Point(327, 233);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 18);
             this.label1.TabIndex = 35;
@@ -264,7 +268,7 @@
             "近畿",
             "中国・四国",
             "九州・沖縄"});
-            this.comboBoxRegion.Location = new System.Drawing.Point(249, 207);
+            this.comboBoxRegion.Location = new System.Drawing.Point(427, 225);
             this.comboBoxRegion.Name = "comboBoxRegion";
             this.comboBoxRegion.Size = new System.Drawing.Size(121, 26);
             this.comboBoxRegion.TabIndex = 34;
@@ -275,7 +279,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("MS UI Gothic", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(168, 26);
+            this.label2.Location = new System.Drawing.Point(111, 26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(234, 52);
             this.label2.TabIndex = 36;
@@ -290,11 +294,43 @@
             this.panel1.Size = new System.Drawing.Size(1356, 100);
             this.panel1.TabIndex = 37;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(653, 872);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 18);
+            this.label3.TabIndex = 38;
+            // 
+            // buttonClear
+            // 
+            this.buttonClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonClear.Location = new System.Drawing.Point(202, 143);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(102, 58);
+            this.buttonClear.TabIndex = 39;
+            this.buttonClear.Text = "入力クリア";
+            this.buttonClear.UseVisualStyleBackColor = false;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(327, 143);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(60, 18);
+            this.label4.TabIndex = 40;
+            this.label4.Text = "店舗ID";
+            // 
             // F_Store
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1321, 1042);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1321, 915);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.buttonClear);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBoxRegion);
@@ -361,5 +397,8 @@
         private System.Windows.Forms.ComboBox comboBoxRegion;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button buttonClear;
+        private System.Windows.Forms.Label label4;
     }
 }

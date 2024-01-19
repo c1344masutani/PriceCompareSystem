@@ -32,6 +32,16 @@ namespace PriceCompareSystem
             this.StartPosition = FormStartPosition.CenterScreen;
         }
 
+        private void AllClear()
+        {
+            labelPrID.Text = "";
+            comboBoxMaker.SelectedIndex = -1;
+            textBoxPrName.Text = "";
+            textBoxPrPrice.Text = "";
+            comboBoxMajorGenre.SelectedIndex = -1;
+            comboBoxSmallGenre.SelectedIndex = -1;
+        }
+
         private void fncAllSelect()
         {
             dataGridViewDsp.Rows.Clear();
@@ -194,6 +204,7 @@ namespace PriceCompareSystem
                 context.SaveChanges();
                 context.Dispose();
                 fncAllSelect();
+                AllClear();
                 MessageBox.Show("登録完了");
             }
             catch (Exception ex)
@@ -270,6 +281,7 @@ namespace PriceCompareSystem
                 context.SaveChanges();
                 context.Dispose();
                 fncAllSelect();
+                AllClear();
                 MessageBox.Show("更新完了");
             }
             catch (Exception ex)
@@ -299,6 +311,7 @@ namespace PriceCompareSystem
                 context.SaveChanges();
                 context.Dispose();
                 fncAllSelect();
+                AllClear();
                 MessageBox.Show("削除完了");
             }
             catch (Exception ex)
@@ -341,6 +354,11 @@ namespace PriceCompareSystem
         private void dataGridViewDsp_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            AllClear();
         }
     }
 }

@@ -146,9 +146,9 @@
             // buttonClear
             // 
             this.buttonClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.buttonClear.Location = new System.Drawing.Point(295, 38);
+            this.buttonClear.Location = new System.Drawing.Point(208, 38);
             this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(96, 58);
+            this.buttonClear.Size = new System.Drawing.Size(111, 58);
             this.buttonClear.TabIndex = 39;
             this.buttonClear.Text = "入力クリア";
             this.buttonClear.UseVisualStyleBackColor = false;
