@@ -29,6 +29,7 @@ namespace PriceCompareSystem
         public F_Product()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void fncAllSelect()
@@ -107,7 +108,7 @@ namespace PriceCompareSystem
             dataGridViewDsp.Columns[1].HeaderText = "メーカー名";
             dataGridViewDsp.Columns[2].Width = 130;
             dataGridViewDsp.Columns[2].HeaderText = "商品名";
-            dataGridViewDsp.Columns[3].Width = 130;
+            dataGridViewDsp.Columns[3].Width = 100;
             dataGridViewDsp.Columns[3].HeaderText = "希望小売価格";
             dataGridViewDsp.Columns[4].Width = 130;
             dataGridViewDsp.Columns[4].HeaderText = "大ジャンル";
@@ -184,6 +185,11 @@ namespace PriceCompareSystem
 
             try
             {
+                DialogResult result = MessageBox.Show("登録してもよろしいですか？", "登録確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (result == DialogResult.Cancel)
+                {
+                    return;
+                }
                 context.M_Products.Add(product);
                 context.SaveChanges();
                 context.Dispose();
@@ -246,14 +252,14 @@ namespace PriceCompareSystem
 
             var context = new PriceCompareSystemContext();
             int count = context.M_Products.Where(x => x.PrName == textBoxPrName.Text).Count();
-            if (count >= 1)
-            {
-                MessageBox.Show("入力された商品名は既に登録されています");
-                return;
-            }
 
             try
             {
+                DialogResult result = MessageBox.Show("更新してもよろしいですか？", "更新確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (result == DialogResult.Cancel)
+                {
+                    return;
+                }
                 int prid = int.Parse(labelPrID.Text.Trim());
                 var product = context.M_Products.Single(x => x.PrID == prid);
                 product.PrName = textBoxPrName.Text.Trim();
@@ -281,6 +287,11 @@ namespace PriceCompareSystem
             }
             try
             {
+                DialogResult result = MessageBox.Show("削除してもよろしいですか？", "削除確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (result == DialogResult.Cancel)
+                {
+                    return;
+                }
                 int prid = int.Parse(labelPrID.Text.Trim());
                 var context = new PriceCompareSystemContext();
                 var product = context.M_Products.Single(x => x.PrID == prid);
@@ -325,6 +336,11 @@ namespace PriceCompareSystem
                 comboBoxSmallGenre.DropDownStyle = ComboBoxStyle.DropDownList;
                 comboBoxSmallGenre.SelectedIndex = -1;
             }
+        }
+
+        private void dataGridViewDsp_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

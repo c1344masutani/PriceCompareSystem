@@ -46,6 +46,7 @@
             this.labelCount = new System.Windows.Forms.Label();
             this.labeltest = new System.Windows.Forms.Label();
             this.panelReview = new System.Windows.Forms.Panel();
+            this.buttonCancel = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.radioButtonStar5 = new System.Windows.Forms.RadioButton();
             this.radioButtonStar4 = new System.Windows.Forms.RadioButton();
@@ -60,7 +61,6 @@
             this.dataGridViewReview = new System.Windows.Forms.DataGridView();
             this.buttonReview = new System.Windows.Forms.Button();
             this.labelReviewScore = new System.Windows.Forms.Label();
-            this.buttonCancel = new System.Windows.Forms.Button();
             this.panelReview.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewReview)).BeginInit();
@@ -237,6 +237,16 @@
             this.panelReview.Size = new System.Drawing.Size(716, 299);
             this.panelReview.TabIndex = 17;
             // 
+            // buttonCancel
+            // 
+            this.buttonCancel.Location = new System.Drawing.Point(506, 27);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(80, 51);
+            this.buttonCancel.TabIndex = 21;
+            this.buttonCancel.Text = "キャンセル";
+            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.radioButtonStar5);
@@ -352,6 +362,7 @@
             this.dataGridViewReview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewReview.Location = new System.Drawing.Point(246, 266);
             this.dataGridViewReview.Name = "dataGridViewReview";
+            this.dataGridViewReview.RowHeadersVisible = false;
             this.dataGridViewReview.RowHeadersWidth = 62;
             this.dataGridViewReview.RowTemplate.Height = 27;
             this.dataGridViewReview.Size = new System.Drawing.Size(990, 272);
@@ -376,15 +387,6 @@
             this.labelReviewScore.Size = new System.Drawing.Size(120, 36);
             this.labelReviewScore.TabIndex = 20;
             this.labelReviewScore.Text = "label11";
-            // 
-            // buttonCancel
-            // 
-            this.buttonCancel.Location = new System.Drawing.Point(506, 27);
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(80, 51);
-            this.buttonCancel.TabIndex = 21;
-            this.buttonCancel.Text = "キャンセル";
-            this.buttonCancel.UseVisualStyleBackColor = true;
             // 
             // F_Result
             // 

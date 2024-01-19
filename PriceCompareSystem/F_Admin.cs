@@ -15,6 +15,7 @@ namespace PriceCompareSystem
         public F_Admin()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void buttonStore_Click(object sender, EventArgs e)
@@ -25,7 +26,7 @@ namespace PriceCompareSystem
 
         private void buttonPriceList_Click(object sender, EventArgs e)
         {
-            F_PriceList.stname = "admin";
+            F_PriceList.stname = "管理者";
             F_PriceList f_PriceList = new F_PriceList();
             f_PriceList.ShowDialog();
         }

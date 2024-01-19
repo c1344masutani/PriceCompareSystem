@@ -48,6 +48,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.buttonClear = new System.Windows.Forms.Button();
+            this.textBoxPlID = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -145,9 +147,11 @@
             // 
             // dataGridViewDsp
             // 
+            this.dataGridViewDsp.AllowUserToAddRows = false;
             this.dataGridViewDsp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDsp.Location = new System.Drawing.Point(76, 390);
             this.dataGridViewDsp.Name = "dataGridViewDsp";
+            this.dataGridViewDsp.RowHeadersVisible = false;
             this.dataGridViewDsp.RowHeadersWidth = 62;
             this.dataGridViewDsp.RowTemplate.Height = 27;
             this.dataGridViewDsp.Size = new System.Drawing.Size(1714, 413);
@@ -204,10 +208,11 @@
             // labelPlID
             // 
             this.labelPlID.AutoSize = true;
-            this.labelPlID.Location = new System.Drawing.Point(411, 145);
+            this.labelPlID.Location = new System.Drawing.Point(265, 153);
             this.labelPlID.Name = "labelPlID";
-            this.labelPlID.Size = new System.Drawing.Size(0, 18);
+            this.labelPlID.Size = new System.Drawing.Size(17, 18);
             this.labelPlID.TabIndex = 22;
+            this.labelPlID.Text = "0";
             // 
             // label3
             // 
@@ -238,12 +243,31 @@
             this.label4.Size = new System.Drawing.Size(0, 18);
             this.label4.TabIndex = 39;
             // 
+            // buttonClear
+            // 
+            this.buttonClear.Location = new System.Drawing.Point(1256, 153);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(97, 38);
+            this.buttonClear.TabIndex = 40;
+            this.buttonClear.Text = "入力クリア";
+            this.buttonClear.UseVisualStyleBackColor = true;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
+            // 
+            // textBoxPlID
+            // 
+            this.textBoxPlID.Location = new System.Drawing.Point(268, 153);
+            this.textBoxPlID.Name = "textBoxPlID";
+            this.textBoxPlID.Size = new System.Drawing.Size(112, 25);
+            this.textBoxPlID.TabIndex = 41;
+            // 
             // F_PriceList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1898, 854);
+            this.Controls.Add(this.textBoxPlID);
+            this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.labelPlID);
@@ -295,5 +319,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button buttonClear;
+        private System.Windows.Forms.TextBox textBoxPlID;
     }
 }

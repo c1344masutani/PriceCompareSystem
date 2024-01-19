@@ -16,6 +16,7 @@ namespace PriceCompareSystem
         public F_Maker()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void fncAllSelect()
@@ -86,6 +87,11 @@ namespace PriceCompareSystem
 
             try
             {
+                DialogResult result = MessageBox.Show("登録してもよろしいですか？", "登録確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (result == DialogResult.Cancel)
+                {
+                    return;
+                }
                 context.M_Makers.Add(maker);
                 context.SaveChanges();
                 context.Dispose();
@@ -122,15 +128,14 @@ namespace PriceCompareSystem
             }
 
             var context = new PriceCompareSystemContext();
-            int count = context.M_Makers.Where(x => x.MaName == textBoxMaName.Text).Count();
-            if (count >= 1)
-            {
-                MessageBox.Show("入力されたメーカー名は既に使用されています");
-                return;
-            }
 
             try
             {
+                DialogResult result = MessageBox.Show("更新してもよろしいですか？", "更新確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (result == DialogResult.Cancel)
+                {
+                    return;
+                }
                 int maid = int.Parse(labelMaID.Text);
                 var maker = context.M_Makers.Single(x => x.MaID == maid);
                 maker.MaName = textBoxMaName.Text.Trim();
@@ -156,6 +161,11 @@ namespace PriceCompareSystem
             }
             try
             {
+                DialogResult result = MessageBox.Show("削除してもよろしいですか？", "削除確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (result == DialogResult.Cancel)
+                {
+                    return;
+                }
                 int maid = int.Parse(labelMaID.Text.Trim());
                 var context = new PriceCompareSystemContext();
                 var maker = context.M_Makers.Single(x => x.MaID == maid);
@@ -198,6 +208,11 @@ namespace PriceCompareSystem
             textBoxMaName.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[1].Value.ToString();
             textBoxMaAddress.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[2].Value.ToString();
             textBoxPhone.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[3].Value.ToString();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -16,6 +16,7 @@ namespace PriceCompareSystem
         public F_MajorGenre()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void fncAllSelect()
@@ -81,6 +82,11 @@ namespace PriceCompareSystem
 
             try
             {
+                DialogResult result = MessageBox.Show("登録してもよろしいですか？", "登録確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (result == DialogResult.Cancel)
+                {
+                    return;
+                }
                 context.M_MajorGenres.Add(majorgenre);
                 context.SaveChanges();
                 context.Dispose();
@@ -112,15 +118,14 @@ namespace PriceCompareSystem
             }
 
             var context = new PriceCompareSystemContext();
-            int count = context.M_MajorGenres.Where(x => x.MgName == textBoxMgName.Text).Count();
-            if (count >= 1)
-            {
-                MessageBox.Show("入力された大ジャンル名は既に使用されています");
-                return;
-            }
 
             try
             {
+                DialogResult result = MessageBox.Show("更新してもよろしいですか？", "更新確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (result == DialogResult.Cancel)
+                {
+                    return;
+                }
                 int mgid = int.Parse(labelMgID.Text.Trim());
                 var majorgenre = context.M_MajorGenres.Single(x => x.MgID == mgid);
                 majorgenre.MgName = textBoxMgName.Text.Trim();
@@ -144,6 +149,11 @@ namespace PriceCompareSystem
             }
             try
             {
+                DialogResult result = MessageBox.Show("削除してもよろしいですか？", "削除確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (result == DialogResult.Cancel)
+                {
+                    return;
+                }
                 int mgid = int.Parse(labelMgID.Text.Trim());
                 var context = new PriceCompareSystemContext();
                 var majorgenre = context.M_MajorGenres.Single(x => x.MgID == mgid);

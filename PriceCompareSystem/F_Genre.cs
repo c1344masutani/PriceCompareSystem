@@ -21,6 +21,7 @@ namespace PriceCompareSystem
         public F_Genre()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void SetFormCombBox()
@@ -95,6 +96,11 @@ namespace PriceCompareSystem
 
             try
             {
+                DialogResult result = MessageBox.Show("登録してもよろしいですか？", "登録確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (result == DialogResult.Cancel)
+                {
+                    return;
+                }
                 context.M_SmallGenres.Add(genre);
                 context.SaveChanges();
                 context.Dispose();
@@ -131,15 +137,14 @@ namespace PriceCompareSystem
             }
 
             var context = new PriceCompareSystemContext();
-            int count = context.M_SmallGenres.Where(x => x.SgName == textBoxGeName.Text).Count();
-            if (count >= 1)
-            {
-                MessageBox.Show("入力されたジャンル名は既に使用されています");
-                return;
-            }
 
             try
             {
+                DialogResult result = MessageBox.Show("更新してもよろしいですか？", "更新確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (result == DialogResult.Cancel)
+                {
+                    return;
+                }
                 int sgid = int.Parse(labelGeID.Text);
                 var genre = context.M_SmallGenres.Single(x => x.SgID == sgid);
                 genre.MgID = int.Parse(comboBoxMajorGenre.SelectedValue.ToString());
@@ -165,6 +170,11 @@ namespace PriceCompareSystem
 
             try
             {
+                DialogResult result = MessageBox.Show("削除してもよろしいですか？", "削除確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (result == DialogResult.Cancel)
+                {
+                    return;
+                }
                 int sgid = int.Parse(labelGeID.Text);
                 var context = new PriceCompareSystemContext();
                 var genre = context.M_SmallGenres.Single(x => x.SgID == sgid);

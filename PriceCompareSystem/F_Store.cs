@@ -135,6 +135,11 @@ namespace PriceCompareSystem
 
             try
             {
+                DialogResult result = MessageBox.Show("登録してもよろしいですか？", "登録確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (result == DialogResult.Cancel)
+                {
+                    return;
+                }
                 context.M_Stores.Add(store);
                 context.SaveChanges();
                 context.Dispose();
@@ -221,15 +226,14 @@ namespace PriceCompareSystem
             }
 
             var context = new PriceCompareSystemContext();
-            int count = context.M_Stores.Where(x => x.StName == textBoxStName.Text).Count();
-            if (count >= 1)
-            {
-                MessageBox.Show("入力された店舗名は既に使用されています");
-                return;
-            }
 
             try
             {
+                DialogResult result = MessageBox.Show("更新してもよろしいですか？", "更新確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (result == DialogResult.Cancel)
+                {
+                    return;
+                }
                 int stid = int.Parse(labelStID.Text.Trim());
                 var store = context.M_Stores.Single(x => x.StID == stid);
                 store.StName = textBoxStName.Text.Trim();
@@ -257,6 +261,11 @@ namespace PriceCompareSystem
             }
             try
             {
+                DialogResult result = MessageBox.Show("削除してもよろしいですか？", "削除確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (result == DialogResult.Cancel)
+                {
+                    return;
+                }
                 int stid = int.Parse(labelStID.Text.Trim());
                 var context = new PriceCompareSystemContext();
                 var store = context.M_Stores.Single(x => x.StID == stid);

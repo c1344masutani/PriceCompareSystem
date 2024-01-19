@@ -41,6 +41,7 @@
             this.labelGeID = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -102,12 +103,14 @@
             // 
             // dataGridViewDsp
             // 
+            this.dataGridViewDsp.AllowUserToAddRows = false;
             this.dataGridViewDsp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDsp.Location = new System.Drawing.Point(155, 379);
             this.dataGridViewDsp.Name = "dataGridViewDsp";
+            this.dataGridViewDsp.RowHeadersVisible = false;
             this.dataGridViewDsp.RowHeadersWidth = 62;
             this.dataGridViewDsp.RowTemplate.Height = 27;
-            this.dataGridViewDsp.Size = new System.Drawing.Size(971, 593);
+            this.dataGridViewDsp.Size = new System.Drawing.Size(971, 438);
             this.dataGridViewDsp.TabIndex = 22;
             this.dataGridViewDsp.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDsp_CellClick);
             // 
@@ -166,11 +169,21 @@
             this.panel1.Size = new System.Drawing.Size(1356, 100);
             this.panel1.TabIndex = 38;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(605, 820);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 18);
+            this.label1.TabIndex = 39;
+            // 
             // F_Genre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1262, 1024);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1262, 853);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.labelGeID);
             this.Controls.Add(this.labelMajorGenre);
@@ -209,5 +222,6 @@
         private System.Windows.Forms.Label labelGeID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
     }
 }

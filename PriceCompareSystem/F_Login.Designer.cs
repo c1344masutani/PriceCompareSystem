@@ -90,6 +90,7 @@
             this.Controls.Add(this.textBoxStID);
             this.Name = "F_Login";
             this.Text = "店舗ログイン";
+            this.Load += new System.EventHandler(this.F_Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

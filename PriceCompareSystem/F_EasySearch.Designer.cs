@@ -98,6 +98,7 @@
             this.dataGridViewDsp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDsp.Location = new System.Drawing.Point(106, 347);
             this.dataGridViewDsp.Name = "dataGridViewDsp";
+            this.dataGridViewDsp.RowHeadersVisible = false;
             this.dataGridViewDsp.RowHeadersWidth = 62;
             this.dataGridViewDsp.RowTemplate.Height = 27;
             this.dataGridViewDsp.Size = new System.Drawing.Size(1292, 581);

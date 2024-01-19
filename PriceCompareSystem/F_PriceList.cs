@@ -98,7 +98,7 @@ namespace PriceCompareSystem
         private void fncAllSelect()
         {
             dataGridViewDsp.Rows.Clear();
-            if(stname == "admin")
+            if(stname == "管理者")
             {
                 try
                 {
@@ -175,8 +175,27 @@ namespace PriceCompareSystem
             }
         }
 
+        private void AllClear()
+        {
+            labelPlID.Text = "";
+            comboBoxMajorGenre.SelectedIndex = -1;
+            comboBoxSmallGenre.SelectedIndex = -1;
+            comboBoxMaker.SelectedIndex = -1;
+            comboBoxProduct.SelectedIndex = -1;
+            textBoxPrice.Text = "";
+        }
+
         private void F_PriceList_Load(object sender, EventArgs e)
         {
+            if(stname == "管理者")
+            {
+                textBoxPlID.Visible = true;
+            }
+            else
+            {
+                textBoxPlID.Visible = false;
+            }
+
             labelStName.Text = stname;
 
             //列数の指定
@@ -253,11 +272,17 @@ namespace PriceCompareSystem
             };
             try
             {
+                DialogResult result = MessageBox.Show("登録してもよろしいですか？", "登録確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (result == DialogResult.Cancel)
+                {
+                    return;
+                }
                 var context = new PriceCompareSystemContext();
                 context.M_PriceLists.Add(pricelist);
                 context.SaveChanges();
                 context.Dispose();
                 fncAllSelect();
+                AllClear();
                 MessageBox.Show("登録完了");
             }
             catch (Exception ex)
@@ -273,6 +298,21 @@ namespace PriceCompareSystem
 
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
+            int plid;
+            if(stname == "管理者")
+            {
+                if (String.IsNullOrEmpty(textBoxPlID.Text))
+                {
+                    MessageBox.Show("価格リストIDが未入力です");
+                    return;
+                }
+
+                plid = int.Parse(textBoxPlID.Text);
+            }
+            else
+            {
+                plid = int.Parse(labelPlID.Text);
+            }
             if (comboBoxSmallGenre.SelectedIndex == -1)
             {
                 MessageBox.Show("ジャンルを選択してください");
@@ -305,7 +345,11 @@ namespace PriceCompareSystem
 
             try
             {
-                int plid = int.Parse(labelPlID.Text);
+                DialogResult result = MessageBox.Show("更新してもよろしいですか？", "更新確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (result == DialogResult.Cancel)
+                {
+                    return;
+                }
                 var context = new PriceCompareSystemContext();
                 var pricelist = context.M_PriceLists.Single(x => x.PlID == plid);
                 pricelist.GeID = int.Parse(comboBoxSmallGenre.SelectedValue.ToString());
@@ -317,6 +361,7 @@ namespace PriceCompareSystem
                 context.SaveChanges();
                 context.Dispose();
                 fncAllSelect();
+                AllClear();
                 MessageBox.Show("更新完了");
             }
             catch (Exception ex)
@@ -327,15 +372,36 @@ namespace PriceCompareSystem
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
+            int plid;
             try
             {
-                int plid = int.Parse(labelPlID.Text);
+                if(stname == "管理者")
+                {
+                    if (String.IsNullOrEmpty(textBoxPlID.Text))
+                    {
+                        MessageBox.Show("価格リストIDが未入力です");
+                        return;
+                    }
+                    plid = int.Parse(textBoxPlID.Text);
+                }
+                else
+                {
+                    plid = int.Parse(labelPlID.Text);
+                }
+
+                DialogResult result = MessageBox.Show("削除してもよろしいですか？","削除確認",MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if(result == DialogResult.Cancel) 
+                {
+                    return;
+                }
+
                 var context = new PriceCompareSystemContext();
                 var pricelist = context.M_PriceLists.Single(x => x.PlID == plid);
                 context.M_PriceLists.Remove(pricelist);
                 context.SaveChanges();
                 context.Dispose();
                 fncAllSelect();
+                AllClear();
                 MessageBox.Show("削除完了");
             }
             catch (Exception ex)
@@ -442,7 +508,14 @@ namespace PriceCompareSystem
 
         private void dataGridViewDsp_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            labelPlID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[0].Value.ToString();
+            if(stname == "管理者")
+            {
+                textBoxPlID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[0].Value.ToString();
+            }
+            else
+            {
+                labelPlID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[0].Value.ToString();
+            }
             string sgname = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[1].Value.ToString();
             var context = new PriceCompareSystemContext();
             int mgid = context.M_SmallGenres.Single(x => x.SgName == sgname).MgID;
@@ -452,6 +525,11 @@ namespace PriceCompareSystem
             comboBoxMaker.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[2].Value.ToString();
             comboBoxProduct.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[3].Value.ToString();
             textBoxPrice.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[4].Value.ToString();
+        }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            AllClear();
         }
     }
 }

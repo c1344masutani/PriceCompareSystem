@@ -198,5 +198,13 @@ namespace PriceCompareSystem
             labelReviewScore.Visible = false;
             panelReview.Visible = true;
         }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            dataGridViewReview.Visible = true;
+            buttonReview.Visible = true;
+            labelReviewScore.Visible = true;
+            panelReview.Visible = false;
+        }
     }
 }

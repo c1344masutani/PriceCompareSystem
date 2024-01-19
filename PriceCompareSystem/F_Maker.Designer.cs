@@ -129,6 +129,7 @@
             this.dataGridViewDsp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDsp.Location = new System.Drawing.Point(91, 418);
             this.dataGridViewDsp.Name = "dataGridViewDsp";
+            this.dataGridViewDsp.RowHeadersVisible = false;
             this.dataGridViewDsp.RowHeadersWidth = 62;
             this.dataGridViewDsp.RowTemplate.Height = 27;
             this.dataGridViewDsp.Size = new System.Drawing.Size(1058, 713);
@@ -171,6 +172,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1356, 100);
             this.panel1.TabIndex = 38;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // F_Maker
             // 
