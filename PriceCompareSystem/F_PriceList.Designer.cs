@@ -50,6 +50,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.buttonClear = new System.Windows.Forms.Button();
             this.textBoxPlID = new System.Windows.Forms.TextBox();
+            this.buttonMenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -154,7 +155,7 @@
             this.dataGridViewDsp.RowHeadersVisible = false;
             this.dataGridViewDsp.RowHeadersWidth = 62;
             this.dataGridViewDsp.RowTemplate.Height = 27;
-            this.dataGridViewDsp.Size = new System.Drawing.Size(1431, 413);
+            this.dataGridViewDsp.Size = new System.Drawing.Size(1431, 558);
             this.dataGridViewDsp.TabIndex = 16;
             this.dataGridViewDsp.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDsp_CellClick);
             // 
@@ -237,7 +238,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(831, 827);
+            this.label4.Location = new System.Drawing.Point(829, 966);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(0, 18);
             this.label4.TabIndex = 39;
@@ -259,12 +260,26 @@
             this.textBoxPlID.Size = new System.Drawing.Size(112, 25);
             this.textBoxPlID.TabIndex = 41;
             // 
+            // buttonMenu
+            // 
+            this.buttonMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.buttonMenu.ForeColor = System.Drawing.Color.Black;
+            this.buttonMenu.Location = new System.Drawing.Point(32, 148);
+            this.buttonMenu.Name = "buttonMenu";
+            this.buttonMenu.Size = new System.Drawing.Size(105, 54);
+            this.buttonMenu.TabIndex = 45;
+            this.buttonMenu.Text = "トップメニュー";
+            this.buttonMenu.UseVisualStyleBackColor = false;
+            this.buttonMenu.Click += new System.EventHandler(this.buttonMenu_Click);
+            // 
             // F_PriceList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1607, 854);
+            this.ClientSize = new System.Drawing.Size(1607, 993);
+            this.ControlBox = false;
+            this.Controls.Add(this.buttonMenu);
             this.Controls.Add(this.textBoxPlID);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.label4);
@@ -320,5 +335,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.TextBox textBoxPlID;
+        private System.Windows.Forms.Button buttonMenu;
     }
 }

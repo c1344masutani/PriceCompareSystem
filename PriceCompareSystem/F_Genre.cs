@@ -35,6 +35,13 @@ namespace PriceCompareSystem
             comboBoxMajorGenre.SelectedIndex = -1;
         }
 
+        private void AllClear()
+        {
+            labelGeID.Text = "";
+            comboBoxMajorGenre.SelectedIndex = -1;
+            textBoxGeName.Text = "";
+        }
+
         private void fncAllSelect()
         {
             dataGridViewDsp.Rows.Clear();
@@ -105,6 +112,7 @@ namespace PriceCompareSystem
                 context.SaveChanges();
                 context.Dispose();
                 fncAllSelect();
+                AllClear();
                 MessageBox.Show("登録完了");
             }
             catch (Exception ex)
@@ -152,6 +160,7 @@ namespace PriceCompareSystem
                 context.SaveChanges();
                 context.Dispose();
                 fncAllSelect();
+                AllClear();
                 MessageBox.Show("更新完了");
             }
             catch (Exception ex)
@@ -182,6 +191,7 @@ namespace PriceCompareSystem
                 context.SaveChanges();
                 context.Dispose();
                 fncAllSelect();
+                AllClear();
                 MessageBox.Show("削除完了");
             }
             catch (Exception ex)
@@ -212,8 +222,10 @@ namespace PriceCompareSystem
 
         private void buttonMajorGenre_Click(object sender, EventArgs e)
         {
+            Opacity = 0;
             F_MajorGenre f_MajorGenre = new F_MajorGenre();
             f_MajorGenre.ShowDialog();
+            f_MajorGenre.Dispose();
         }
 
         private void dataGridViewDsp_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -221,6 +233,19 @@ namespace PriceCompareSystem
             labelGeID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[0].Value.ToString();
             comboBoxMajorGenre.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[1].Value.ToString();
             textBoxGeName.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[2].Value.ToString();
+        }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            AllClear();
+        }
+
+        private void buttonMenu_Click(object sender, EventArgs e)
+        {
+            Opacity = 0;
+            F_Admin f_Admin = new F_Admin();
+            f_Admin.ShowDialog();
+            f_Admin.Dispose();
         }
     }
 }

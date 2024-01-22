@@ -33,6 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.buttonAdmin = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.buttonFinish = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonEasySearch
@@ -40,9 +41,9 @@
             this.buttonEasySearch.BackColor = System.Drawing.Color.DarkOrange;
             this.buttonEasySearch.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.buttonEasySearch.ForeColor = System.Drawing.Color.White;
-            this.buttonEasySearch.Location = new System.Drawing.Point(185, 218);
+            this.buttonEasySearch.Location = new System.Drawing.Point(133, 226);
             this.buttonEasySearch.Name = "buttonEasySearch";
-            this.buttonEasySearch.Size = new System.Drawing.Size(547, 139);
+            this.buttonEasySearch.Size = new System.Drawing.Size(762, 188);
             this.buttonEasySearch.TabIndex = 0;
             this.buttonEasySearch.Text = "かんたん検索";
             this.buttonEasySearch.UseVisualStyleBackColor = false;
@@ -53,9 +54,9 @@
             this.buttonSearch.BackColor = System.Drawing.Color.DodgerBlue;
             this.buttonSearch.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.buttonSearch.ForeColor = System.Drawing.Color.White;
-            this.buttonSearch.Location = new System.Drawing.Point(185, 417);
+            this.buttonSearch.Location = new System.Drawing.Point(131, 487);
             this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(547, 139);
+            this.buttonSearch.Size = new System.Drawing.Size(764, 188);
             this.buttonSearch.TabIndex = 1;
             this.buttonSearch.Text = "詳細検索";
             this.buttonSearch.UseVisualStyleBackColor = false;
@@ -65,7 +66,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("メイリオ", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label1.Location = new System.Drawing.Point(234, 51);
+            this.label1.Location = new System.Drawing.Point(326, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(414, 72);
             this.label1.TabIndex = 2;
@@ -74,7 +75,7 @@
             // buttonAdmin
             // 
             this.buttonAdmin.BackColor = System.Drawing.Color.Silver;
-            this.buttonAdmin.Location = new System.Drawing.Point(743, 23);
+            this.buttonAdmin.Location = new System.Drawing.Point(892, 33);
             this.buttonAdmin.Name = "buttonAdmin";
             this.buttonAdmin.Size = new System.Drawing.Size(131, 73);
             this.buttonAdmin.TabIndex = 32;
@@ -90,13 +91,25 @@
             this.label2.Size = new System.Drawing.Size(0, 18);
             this.label2.TabIndex = 33;
             // 
+            // buttonFinish
+            // 
+            this.buttonFinish.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonFinish.Location = new System.Drawing.Point(25, 33);
+            this.buttonFinish.Name = "buttonFinish";
+            this.buttonFinish.Size = new System.Drawing.Size(131, 73);
+            this.buttonFinish.TabIndex = 34;
+            this.buttonFinish.Text = "終了する";
+            this.buttonFinish.UseVisualStyleBackColor = false;
+            this.buttonFinish.Click += new System.EventHandler(this.buttonFinish_Click);
+            // 
             // F_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(898, 606);
+            this.ClientSize = new System.Drawing.Size(1051, 762);
+            this.Controls.Add(this.buttonFinish);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonAdmin);
             this.Controls.Add(this.label1);
@@ -105,6 +118,7 @@
             this.Name = "F_Menu";
             this.Text = "トップメニュー";
             this.Activated += new System.EventHandler(this.F_Menu_Activated);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.F_Menu_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -117,5 +131,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonAdmin;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button buttonFinish;
     }
 }

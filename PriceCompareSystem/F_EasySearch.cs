@@ -43,6 +43,7 @@ namespace PriceCompareSystem
             textBoxKewWord.Text = "";
             comboBoxRegion.SelectedIndex = -1;
             comboBoxPrefectures.SelectedIndex = -1;
+            SetFormCombBox();
         }
 
         private void buttonSearch_Click(object sender, EventArgs e)
@@ -50,8 +51,14 @@ namespace PriceCompareSystem
             dataGridViewDsp.Rows.Clear();
             string kewword = string.Empty;
             string pfid = string.Empty;
+            string region = string.Empty;
 
-            if(comboBoxPrefectures.SelectedIndex != -1)
+            if (comboBoxRegion.SelectedIndex != -1)
+            {
+                region = comboBoxRegion.SelectedIndex.ToString();
+            }
+
+            if (comboBoxPrefectures.SelectedIndex != -1)
             {
                 pfid = comboBoxPrefectures.SelectedValue.ToString();
             }
@@ -77,7 +84,8 @@ namespace PriceCompareSystem
                          on t1.StID equals t6.StID
                          orderby t1.Price, t2.PrName
                          where t1.PfID.ToString().Contains(pfid) &&
-                               t2.PrName.Contains(kewword)
+                               t2.PrName.Contains(kewword) &&
+                               t5.region.ToString() == region
                          select new
                          {
                              t4.SgName,
@@ -133,7 +141,8 @@ namespace PriceCompareSystem
                      on t1.StID equals t6.StID
                      orderby t1.Price, t2.PrName
                      where t1.PfID.ToString().Contains(pfid) &&
-                           t4.SgName.Contains(kewword)
+                           t4.SgName.Contains(kewword) &&
+                           t5.region.ToString() == region
                      select new
                      {
                          t4.SgName,
@@ -160,6 +169,10 @@ namespace PriceCompareSystem
             {
                 dataGridViewDsp.Sort(dataGridViewDsp.Columns[3], System.ComponentModel.ListSortDirection.Ascending);
                 dataGridViewDsp.CurrentCell = dataGridViewDsp[0, 0];
+            }
+            else
+            {
+                MessageBox.Show("検索結果：0件\n条件を変更してください");
             }
         }
 
@@ -216,14 +229,24 @@ namespace PriceCompareSystem
 
         private void buttonSearchForm_Click(object sender, EventArgs e)
         {
+            Opacity = 0;
             F_Serach f_Serach = new F_Serach();
             f_Serach.ShowDialog();
-
+            f_Serach.Dispose();
         }
 
         private void buttonClear_Click(object sender, EventArgs e)
         {
             InputClear();
+            dataGridViewDsp.Rows.Clear();
+        }
+
+        private void buttonMenu_Click(object sender, EventArgs e)
+        {
+            Opacity = 0;
+            F_Menu f_Menu = new F_Menu();
+            f_Menu.ShowDialog();
+            f_Menu.Dispose();
         }
     }
 }

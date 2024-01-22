@@ -14,5 +14,6 @@ namespace PriceCompareSystem.Entity
         [MaxLength(5)]
         [Required]
         public string PfName { get; set; }  //都道府県名
+        public int region { get; set; }     //地域
     }
 }

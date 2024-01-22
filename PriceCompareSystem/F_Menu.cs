@@ -49,5 +49,20 @@ namespace PriceCompareSystem
                 Opacity = 1;
             }
         }
+
+        private void buttonFinish_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("終了してもよろしいですか？", "終了確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (result == DialogResult.Cancel)
+            {
+                return;
+            }
+            Application.Exit();
+        }
+
+        private void F_Menu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

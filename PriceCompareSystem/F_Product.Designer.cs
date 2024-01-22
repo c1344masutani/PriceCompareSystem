@@ -48,6 +48,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.buttonClear = new System.Windows.Forms.Button();
+            this.buttonMenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -236,12 +237,25 @@
             this.buttonClear.UseVisualStyleBackColor = false;
             this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
+            // buttonMenu
+            // 
+            this.buttonMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.buttonMenu.Location = new System.Drawing.Point(70, 150);
+            this.buttonMenu.Name = "buttonMenu";
+            this.buttonMenu.Size = new System.Drawing.Size(81, 53);
+            this.buttonMenu.TabIndex = 43;
+            this.buttonMenu.Text = "メニュー";
+            this.buttonMenu.UseVisualStyleBackColor = false;
+            this.buttonMenu.Click += new System.EventHandler(this.buttonMenu_Click);
+            // 
             // F_Product
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1355, 967);
+            this.ControlBox = false;
+            this.Controls.Add(this.buttonMenu);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
@@ -294,5 +308,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button buttonClear;
+        private System.Windows.Forms.Button buttonMenu;
     }
 }

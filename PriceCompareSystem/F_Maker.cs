@@ -225,5 +225,13 @@ namespace PriceCompareSystem
         {
 
         }
+
+        private void buttonMenu_Click(object sender, EventArgs e)
+        {
+            Opacity = 0;
+            F_Admin f_Admin = new F_Admin();
+            f_Admin.ShowDialog();
+            f_Admin.Dispose();
+        }
     }
 }

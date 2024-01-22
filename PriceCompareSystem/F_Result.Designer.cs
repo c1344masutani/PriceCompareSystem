@@ -367,6 +367,7 @@
             this.dataGridViewReview.RowTemplate.Height = 27;
             this.dataGridViewReview.Size = new System.Drawing.Size(990, 272);
             this.dataGridViewReview.TabIndex = 18;
+            this.dataGridViewReview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewReview_CellContentClick);
             // 
             // buttonReview
             // 

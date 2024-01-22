@@ -232,6 +232,12 @@ namespace PriceCompareSystem
 
         private void buttonRegester_Click(object sender, EventArgs e)
         {
+            if(comboBoxMajorGenre.SelectedIndex == -1)
+            {
+                MessageBox.Show("大ジャンルを選択してください");
+                return;
+            }
+
             if(comboBoxSmallGenre.SelectedIndex == -1)
             {
                 MessageBox.Show("ジャンルを選択してください");
@@ -261,11 +267,22 @@ namespace PriceCompareSystem
                 return;
             }
 
+            int prid = int.Parse(comboBoxProduct.SelectedValue.ToString());
+            int stid2 = int.Parse(stid);
+            var context = new PriceCompareSystemContext();
+            int count = context.M_PriceLists.Where(x => x.PrID == prid && x.StID == stid2).Count();
+            if(count >= 1)
+            {
+                MessageBox.Show("入力された商品名は既に登録されています");
+                return;
+            }
+
             var pricelist = new M_PriceList
             {
+                MgID = int.Parse(comboBoxMajorGenre.SelectedValue.ToString()),
                 GeID = int.Parse(comboBoxSmallGenre.SelectedValue.ToString()),
                 MaID = int.Parse(comboBoxMaker.SelectedValue.ToString()),
-                PrID = int.Parse(comboBoxProduct.SelectedValue.ToString()),
+                PrID = prid,
                 Price = int.Parse(textBoxPrice.Text.Trim()),
                 PfID = int.Parse(pfid),
                 StID = int.Parse(stid)
@@ -277,7 +294,6 @@ namespace PriceCompareSystem
                 {
                     return;
                 }
-                var context = new PriceCompareSystemContext();
                 context.M_PriceLists.Add(pricelist);
                 context.SaveChanges();
                 context.Dispose();
@@ -309,10 +325,20 @@ namespace PriceCompareSystem
 
                 plid = int.Parse(textBoxPlID.Text);
             }
-            else
+            else if (String.IsNullOrEmpty(labelPlID.Text))
             {
-                plid = int.Parse(labelPlID.Text);
+                MessageBox.Show("更新する項目を選択してください");
+                return;
             }
+
+            plid = int.Parse(labelPlID.Text);
+
+            if (comboBoxMajorGenre.SelectedIndex == -1)
+            {
+                MessageBox.Show("大ジャンルを選択してください");
+                return;
+            }
+
             if (comboBoxSmallGenre.SelectedIndex == -1)
             {
                 MessageBox.Show("ジャンルを選択してください");
@@ -352,6 +378,7 @@ namespace PriceCompareSystem
                 }
                 var context = new PriceCompareSystemContext();
                 var pricelist = context.M_PriceLists.Single(x => x.PlID == plid);
+                pricelist.MgID = int.Parse(comboBoxMajorGenre.SelectedValue.ToString());
                 pricelist.GeID = int.Parse(comboBoxSmallGenre.SelectedValue.ToString());
                 pricelist.MaID = int.Parse(comboBoxMaker.SelectedValue.ToString());
                 pricelist.PrID = int.Parse(comboBoxProduct.SelectedValue.ToString());
@@ -530,6 +557,14 @@ namespace PriceCompareSystem
         private void buttonClear_Click(object sender, EventArgs e)
         {
             AllClear();
+        }
+
+        private void buttonMenu_Click(object sender, EventArgs e)
+        {
+            Opacity = 0;
+            F_Menu f_Menu = new F_Menu();
+            f_Menu.ShowDialog();
+            f_Menu.Dispose();
         }
     }
 }

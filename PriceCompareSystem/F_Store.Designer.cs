@@ -60,6 +60,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.buttonClear = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.buttonMenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.prefectureBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.priceCompareSystemDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.priceCompareSystemDataSet)).BeginInit();
@@ -322,12 +323,25 @@
             this.label4.TabIndex = 40;
             this.label4.Text = "店舗ID";
             // 
+            // buttonMenu
+            // 
+            this.buttonMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.buttonMenu.Location = new System.Drawing.Point(96, 148);
+            this.buttonMenu.Name = "buttonMenu";
+            this.buttonMenu.Size = new System.Drawing.Size(81, 53);
+            this.buttonMenu.TabIndex = 44;
+            this.buttonMenu.Text = "メニュー";
+            this.buttonMenu.UseVisualStyleBackColor = false;
+            this.buttonMenu.Click += new System.EventHandler(this.buttonMenu_Click);
+            // 
             // F_Store
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1321, 915);
+            this.ControlBox = false;
+            this.Controls.Add(this.buttonMenu);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.label3);
@@ -400,5 +414,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button buttonMenu;
     }
 }

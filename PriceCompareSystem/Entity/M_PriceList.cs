@@ -11,6 +11,7 @@ namespace PriceCompareSystem.Entity
     {
         [Key]
         public int PlID { get; set; }       //価格リストID
+        public int MgID { get; set; }       //大ジャンルID
         public int GeID { get; set; }       //ジャンルID
         public int MaID { get; set; }       //メーカーID
         public int PrID { get; set; }       //商品ID

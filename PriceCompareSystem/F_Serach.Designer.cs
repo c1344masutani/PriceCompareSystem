@@ -49,6 +49,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.buttonMenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -132,13 +133,14 @@
             this.comboBoxProduct.Name = "comboBoxProduct";
             this.comboBoxProduct.Size = new System.Drawing.Size(220, 26);
             this.comboBoxProduct.TabIndex = 18;
+            this.comboBoxProduct.SelectionChangeCommitted += new System.EventHandler(this.comboBoxProduct_SelectionChangeCommitted);
             // 
             // comboBoxMajorGenre
             // 
             this.comboBoxMajorGenre.FormattingEnabled = true;
             this.comboBoxMajorGenre.Location = new System.Drawing.Point(140, 133);
             this.comboBoxMajorGenre.Name = "comboBoxMajorGenre";
-            this.comboBoxMajorGenre.Size = new System.Drawing.Size(121, 26);
+            this.comboBoxMajorGenre.Size = new System.Drawing.Size(162, 26);
             this.comboBoxMajorGenre.TabIndex = 28;
             this.comboBoxMajorGenre.SelectionChangeCommitted += new System.EventHandler(this.comboBoxMajorGenre_SelectionChangeCommitted);
             // 
@@ -156,7 +158,7 @@
             this.comboBoxSmallGenre.FormattingEnabled = true;
             this.comboBoxSmallGenre.Location = new System.Drawing.Point(140, 183);
             this.comboBoxSmallGenre.Name = "comboBoxSmallGenre";
-            this.comboBoxSmallGenre.Size = new System.Drawing.Size(121, 26);
+            this.comboBoxSmallGenre.Size = new System.Drawing.Size(162, 26);
             this.comboBoxSmallGenre.TabIndex = 26;
             this.comboBoxSmallGenre.SelectionChangeCommitted += new System.EventHandler(this.comboBoxSmallGenre_SelectionChangeCommitted);
             // 
@@ -183,7 +185,7 @@
             // buttonEasySearch
             // 
             this.buttonEasySearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.buttonEasySearch.Location = new System.Drawing.Point(1604, 25);
+            this.buttonEasySearch.Location = new System.Drawing.Point(1607, 25);
             this.buttonEasySearch.Name = "buttonEasySearch";
             this.buttonEasySearch.Size = new System.Drawing.Size(125, 81);
             this.buttonEasySearch.TabIndex = 30;
@@ -273,6 +275,18 @@
             this.label6.Size = new System.Drawing.Size(0, 18);
             this.label6.TabIndex = 38;
             // 
+            // buttonMenu
+            // 
+            this.buttonMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.buttonMenu.ForeColor = System.Drawing.Color.Black;
+            this.buttonMenu.Location = new System.Drawing.Point(1748, 25);
+            this.buttonMenu.Name = "buttonMenu";
+            this.buttonMenu.Size = new System.Drawing.Size(125, 81);
+            this.buttonMenu.TabIndex = 44;
+            this.buttonMenu.Text = "トップメニュー";
+            this.buttonMenu.UseVisualStyleBackColor = false;
+            this.buttonMenu.Click += new System.EventHandler(this.buttonMenu_Click);
+            // 
             // F_Serach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -280,6 +294,8 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1898, 1050);
+            this.ControlBox = false;
+            this.Controls.Add(this.buttonMenu);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -327,6 +343,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button buttonMenu;
     }
 }
 

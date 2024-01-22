@@ -42,13 +42,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonClear = new System.Windows.Forms.Button();
+            this.buttonMenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(674, 302);
+            this.buttonDelete.Location = new System.Drawing.Point(808, 301);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(109, 56);
             this.buttonDelete.TabIndex = 17;
@@ -58,7 +60,7 @@
             // 
             // buttonUpdate
             // 
-            this.buttonUpdate.Location = new System.Drawing.Point(496, 302);
+            this.buttonUpdate.Location = new System.Drawing.Point(630, 301);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(109, 56);
             this.buttonUpdate.TabIndex = 16;
@@ -68,7 +70,7 @@
             // 
             // buttonRegester
             // 
-            this.buttonRegester.Location = new System.Drawing.Point(311, 302);
+            this.buttonRegester.Location = new System.Drawing.Point(445, 301);
             this.buttonRegester.Name = "buttonRegester";
             this.buttonRegester.Size = new System.Drawing.Size(109, 56);
             this.buttonRegester.TabIndex = 15;
@@ -79,7 +81,7 @@
             // labelGeIDtitle
             // 
             this.labelGeIDtitle.AutoSize = true;
-            this.labelGeIDtitle.Location = new System.Drawing.Point(152, 163);
+            this.labelGeIDtitle.Location = new System.Drawing.Point(286, 162);
             this.labelGeIDtitle.Name = "labelGeIDtitle";
             this.labelGeIDtitle.Size = new System.Drawing.Size(79, 18);
             this.labelGeIDtitle.TabIndex = 18;
@@ -87,7 +89,7 @@
             // 
             // textBoxGeName
             // 
-            this.textBoxGeName.Location = new System.Drawing.Point(268, 251);
+            this.textBoxGeName.Location = new System.Drawing.Point(402, 250);
             this.textBoxGeName.Name = "textBoxGeName";
             this.textBoxGeName.Size = new System.Drawing.Size(225, 25);
             this.textBoxGeName.TabIndex = 21;
@@ -95,7 +97,7 @@
             // labelName
             // 
             this.labelName.AutoSize = true;
-            this.labelName.Location = new System.Drawing.Point(152, 258);
+            this.labelName.Location = new System.Drawing.Point(286, 257);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(81, 18);
             this.labelName.TabIndex = 20;
@@ -117,14 +119,14 @@
             // comboBoxMajorGenre
             // 
             this.comboBoxMajorGenre.FormattingEnabled = true;
-            this.comboBoxMajorGenre.Location = new System.Drawing.Point(268, 207);
+            this.comboBoxMajorGenre.Location = new System.Drawing.Point(402, 206);
             this.comboBoxMajorGenre.Name = "comboBoxMajorGenre";
             this.comboBoxMajorGenre.Size = new System.Drawing.Size(121, 26);
             this.comboBoxMajorGenre.TabIndex = 23;
             // 
             // buttonMajorGenre
             // 
-            this.buttonMajorGenre.Location = new System.Drawing.Point(407, 184);
+            this.buttonMajorGenre.Location = new System.Drawing.Point(541, 183);
             this.buttonMajorGenre.Name = "buttonMajorGenre";
             this.buttonMajorGenre.Size = new System.Drawing.Size(86, 49);
             this.buttonMajorGenre.TabIndex = 24;
@@ -135,7 +137,7 @@
             // labelMajorGenre
             // 
             this.labelMajorGenre.AutoSize = true;
-            this.labelMajorGenre.Location = new System.Drawing.Point(150, 210);
+            this.labelMajorGenre.Location = new System.Drawing.Point(284, 209);
             this.labelMajorGenre.Name = "labelMajorGenre";
             this.labelMajorGenre.Size = new System.Drawing.Size(81, 18);
             this.labelMajorGenre.TabIndex = 25;
@@ -144,7 +146,7 @@
             // labelGeID
             // 
             this.labelGeID.AutoSize = true;
-            this.labelGeID.Location = new System.Drawing.Point(268, 162);
+            this.labelGeID.Location = new System.Drawing.Point(402, 161);
             this.labelGeID.Name = "labelGeID";
             this.labelGeID.Size = new System.Drawing.Size(0, 18);
             this.labelGeID.TabIndex = 26;
@@ -177,12 +179,36 @@
             this.label1.Size = new System.Drawing.Size(0, 18);
             this.label1.TabIndex = 39;
             // 
+            // buttonClear
+            // 
+            this.buttonClear.Location = new System.Drawing.Point(144, 161);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(105, 54);
+            this.buttonClear.TabIndex = 41;
+            this.buttonClear.Text = "入力クリア";
+            this.buttonClear.UseVisualStyleBackColor = true;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
+            // 
+            // buttonMenu
+            // 
+            this.buttonMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.buttonMenu.Location = new System.Drawing.Point(30, 162);
+            this.buttonMenu.Name = "buttonMenu";
+            this.buttonMenu.Size = new System.Drawing.Size(81, 53);
+            this.buttonMenu.TabIndex = 42;
+            this.buttonMenu.Text = "メニュー";
+            this.buttonMenu.UseVisualStyleBackColor = false;
+            this.buttonMenu.Click += new System.EventHandler(this.buttonMenu_Click);
+            // 
             // F_Genre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1262, 853);
+            this.ControlBox = false;
+            this.Controls.Add(this.buttonMenu);
+            this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.labelGeID);
@@ -223,5 +249,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonClear;
+        private System.Windows.Forms.Button buttonMenu;
     }
 }

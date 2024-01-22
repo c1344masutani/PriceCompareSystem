@@ -78,7 +78,7 @@ namespace PriceCompareSystem
             dataGridViewReview.ColumnCount = 2;
             dataGridViewReview.Columns[0].Width = 200;
             dataGridViewReview.Columns[0].HeaderText = "タイトル";
-            dataGridViewReview.Columns[1].Width = 200;
+            dataGridViewReview.Columns[1].Width = 650;
             dataGridViewReview.Columns[1].HeaderText = "本文";
             dataGridViewReview.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridViewReview.Columns[1].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
@@ -205,6 +205,11 @@ namespace PriceCompareSystem
             buttonReview.Visible = true;
             labelReviewScore.Visible = true;
             panelReview.Visible = false;
+        }
+
+        private void dataGridViewReview_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

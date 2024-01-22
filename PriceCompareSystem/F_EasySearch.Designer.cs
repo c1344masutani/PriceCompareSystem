@@ -41,6 +41,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.buttonMenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,7 +59,7 @@
             this.buttonSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.buttonSearch.Location = new System.Drawing.Point(607, 270);
             this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(130, 61);
+            this.buttonSearch.Size = new System.Drawing.Size(130, 70);
             this.buttonSearch.TabIndex = 11;
             this.buttonSearch.Text = "検索";
             this.buttonSearch.UseVisualStyleBackColor = false;
@@ -137,7 +138,7 @@
             this.buttonSearchForm.ForeColor = System.Drawing.Color.White;
             this.buttonSearchForm.Location = new System.Drawing.Point(1231, 28);
             this.buttonSearchForm.Name = "buttonSearchForm";
-            this.buttonSearchForm.Size = new System.Drawing.Size(106, 58);
+            this.buttonSearchForm.Size = new System.Drawing.Size(125, 81);
             this.buttonSearchForm.TabIndex = 38;
             this.buttonSearchForm.Text = "詳細検索";
             this.buttonSearchForm.UseVisualStyleBackColor = false;
@@ -181,6 +182,18 @@
             this.label5.Size = new System.Drawing.Size(0, 18);
             this.label5.TabIndex = 42;
             // 
+            // buttonMenu
+            // 
+            this.buttonMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.buttonMenu.ForeColor = System.Drawing.Color.Black;
+            this.buttonMenu.Location = new System.Drawing.Point(1367, 28);
+            this.buttonMenu.Name = "buttonMenu";
+            this.buttonMenu.Size = new System.Drawing.Size(125, 81);
+            this.buttonMenu.TabIndex = 43;
+            this.buttonMenu.Text = "トップメニュー";
+            this.buttonMenu.UseVisualStyleBackColor = false;
+            this.buttonMenu.Click += new System.EventHandler(this.buttonMenu_Click);
+            // 
             // F_EasySearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -188,6 +201,8 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1518, 1024);
+            this.ControlBox = false;
+            this.Controls.Add(this.buttonMenu);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -225,5 +240,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button buttonMenu;
     }
 }
