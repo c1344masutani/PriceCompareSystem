@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PriceCompareSystem.Entity
 {
-    internal class M_MajorGenre
+    internal class M_MajorGenres
     {
         [Key]
         public int MgID { get; set; }

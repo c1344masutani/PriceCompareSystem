@@ -10,9 +10,9 @@ namespace PriceCompareSystem.DbAccess
 {
     internal class SmallGenreDataAccess
     {
-        public List<M_SmallGenre> GetSmallGenreDspData(int? mgid)
+        public List<M_SmallGenres> GetSmallGenreDspData(int? mgid)
         {
-            List<M_SmallGenre> SmallGenre = new List<M_SmallGenre>();
+            List<M_SmallGenres> SmallGenre = new List<M_SmallGenres>();
             try
             {
                 var context = new PriceCompareSystemContext();

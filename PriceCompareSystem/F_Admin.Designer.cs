@@ -34,6 +34,7 @@
             this.buttonProduct = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonMenu = new System.Windows.Forms.Button();
+            this.buttonPWChange = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonGenre
@@ -100,6 +101,17 @@
             this.buttonMenu.UseVisualStyleBackColor = false;
             this.buttonMenu.Click += new System.EventHandler(this.buttonMenu_Click);
             // 
+            // buttonPWChange
+            // 
+            this.buttonPWChange.BackColor = System.Drawing.Color.Silver;
+            this.buttonPWChange.Location = new System.Drawing.Point(22, 132);
+            this.buttonPWChange.Name = "buttonPWChange";
+            this.buttonPWChange.Size = new System.Drawing.Size(131, 73);
+            this.buttonPWChange.TabIndex = 46;
+            this.buttonPWChange.Text = "パスワード変更";
+            this.buttonPWChange.UseVisualStyleBackColor = false;
+            this.buttonPWChange.Click += new System.EventHandler(this.buttonPWChange_Click);
+            // 
             // F_Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -107,6 +119,7 @@
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(919, 826);
             this.ControlBox = false;
+            this.Controls.Add(this.buttonPWChange);
             this.Controls.Add(this.buttonMenu);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonGenre);
@@ -129,5 +142,6 @@
         private System.Windows.Forms.Button buttonProduct;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonMenu;
+        private System.Windows.Forms.Button buttonPWChange;
     }
 }

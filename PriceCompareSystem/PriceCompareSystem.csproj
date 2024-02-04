@@ -57,8 +57,11 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.JScript" />
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -71,26 +74,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\TableDataImport.cs" />
     <Compile Include="DbAccess\MajorGenreDataAccess.cs" />
     <Compile Include="DbAccess\MakerDataAccess.cs" />
     <Compile Include="DbAccess\SmallGenreDataAccess.cs" />
     <Compile Include="DbAccess\PrefectureDataAccess.cs" />
     <Compile Include="DbAccess\ProductDataAccess.cs" />
     <Compile Include="DbAccess\StoreDataAccess.cs" />
-    <Compile Include="Entity\M_Genre.cs" />
-    <Compile Include="Entity\M_MajorGenre.cs" />
-    <Compile Include="Entity\M_Maker.cs" />
-    <Compile Include="Entity\M_Prefecture.cs" />
-    <Compile Include="Entity\M_PriceList.cs" />
-    <Compile Include="Entity\M_Product.cs" />
-    <Compile Include="Entity\M_Review.cs" />
-    <Compile Include="Entity\M_SmallGenre.cs" />
-    <Compile Include="Entity\M_Store.cs" />
+    <Compile Include="Entity\M_MajorGenres.cs" />
+    <Compile Include="Entity\M_Makers.cs" />
+    <Compile Include="Entity\M_Prefectures.cs" />
+    <Compile Include="Entity\M_PriceLists.cs" />
+    <Compile Include="Entity\M_Products.cs" />
+    <Compile Include="Entity\M_Reviews.cs" />
+    <Compile Include="Entity\M_SmallGenres.cs" />
+    <Compile Include="Entity\M_Stores.cs" />
+    <Compile Include="Entity\M_Users.cs" />
     <Compile Include="F_Admin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="F_Admin.Designer.cs">
       <DependentUpon>F_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_AdminPW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_AdminPW.Designer.cs">
+      <DependentUpon>F_AdminPW.cs</DependentUpon>
     </Compile>
     <Compile Include="F_EasySearch.cs">
       <SubType>Form</SubType>
@@ -178,6 +188,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="F_Admin.resx">
       <DependentUpon>F_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_AdminPW.resx">
+      <DependentUpon>F_AdminPW.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_EasySearch.resx">
       <DependentUpon>F_EasySearch.cs</DependentUpon>

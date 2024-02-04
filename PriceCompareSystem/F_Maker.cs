@@ -86,7 +86,7 @@ namespace PriceCompareSystem
                 return;
             }
 
-            var maker = new M_Maker
+            var maker = new M_Makers
             {
                 MaName = textBoxMaName.Text.Trim(),
                 MaAddress = textBoxMaAddress.Text.Trim(),

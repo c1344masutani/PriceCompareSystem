@@ -22,27 +22,27 @@ namespace PriceCompareSystem
 
         //大ジャンルコンボボックス用
         MajorGenreDataAccess majorGenreDataAccess = new MajorGenreDataAccess();
-        private static List<M_MajorGenre> MajorGenre;
+        private static List<M_MajorGenres> MajorGenre;
 
         //小ジャンルコンボボックス用
         SmallGenreDataAccess smallGenreDataAccess = new SmallGenreDataAccess();
-        private static List<M_SmallGenre> SmallGenre;
+        private static List<M_SmallGenres> SmallGenre;
 
         //商品コンボボックス用
         ProductDataAccess productDataAccess = new ProductDataAccess();
-        private static List<M_Product> Product;
+        private static List<M_Products> Product;
 
         //都道府県コンボボックス用
         PrefectureDataAccess prefectureDataAccess = new PrefectureDataAccess();
-        private static List<M_Prefecture> Prefecture;
+        private static List<M_Prefectures> Prefecture;
 
         //店舗コンボボックス用
         StoreDataAccess storeDataAccess = new StoreDataAccess();
-        private static List<M_Store> Store;
+        private static List<M_Stores> Store;
 
         //メーカーコンボボックス用
         MakerDataAccess makerDataAccess = new MakerDataAccess();
-        private static List<M_Maker> Maker;
+        private static List<M_Makers> Maker;
 
         public F_PriceList()
         {
@@ -277,7 +277,7 @@ namespace PriceCompareSystem
                 return;
             }
 
-            var pricelist = new M_PriceList
+            var pricelist = new M_PriceLists
             {
                 MgID = int.Parse(comboBoxMajorGenre.SelectedValue.ToString()),
                 GeID = int.Parse(comboBoxSmallGenre.SelectedValue.ToString()),

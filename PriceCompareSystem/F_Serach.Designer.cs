@@ -58,7 +58,7 @@
             // labelProduct
             // 
             this.labelProduct.AutoSize = true;
-            this.labelProduct.Location = new System.Drawing.Point(7, 91);
+            this.labelProduct.Location = new System.Drawing.Point(7, 191);
             this.labelProduct.Name = "labelProduct";
             this.labelProduct.Size = new System.Drawing.Size(62, 18);
             this.labelProduct.TabIndex = 0;
@@ -129,7 +129,7 @@
             // comboBoxProduct
             // 
             this.comboBoxProduct.FormattingEnabled = true;
-            this.comboBoxProduct.Location = new System.Drawing.Point(679, 187);
+            this.comboBoxProduct.Location = new System.Drawing.Point(140, 188);
             this.comboBoxProduct.Name = "comboBoxProduct";
             this.comboBoxProduct.Size = new System.Drawing.Size(220, 26);
             this.comboBoxProduct.TabIndex = 18;
@@ -138,7 +138,7 @@
             // comboBoxMajorGenre
             // 
             this.comboBoxMajorGenre.FormattingEnabled = true;
-            this.comboBoxMajorGenre.Location = new System.Drawing.Point(140, 133);
+            this.comboBoxMajorGenre.Location = new System.Drawing.Point(140, 85);
             this.comboBoxMajorGenre.Name = "comboBoxMajorGenre";
             this.comboBoxMajorGenre.Size = new System.Drawing.Size(162, 26);
             this.comboBoxMajorGenre.TabIndex = 28;
@@ -147,7 +147,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 136);
+            this.label2.Location = new System.Drawing.Point(6, 88);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 18);
             this.label2.TabIndex = 27;
@@ -156,7 +156,7 @@
             // comboBoxSmallGenre
             // 
             this.comboBoxSmallGenre.FormattingEnabled = true;
-            this.comboBoxSmallGenre.Location = new System.Drawing.Point(140, 183);
+            this.comboBoxSmallGenre.Location = new System.Drawing.Point(140, 135);
             this.comboBoxSmallGenre.Name = "comboBoxSmallGenre";
             this.comboBoxSmallGenre.Size = new System.Drawing.Size(162, 26);
             this.comboBoxSmallGenre.TabIndex = 26;
@@ -165,7 +165,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 183);
+            this.label3.Location = new System.Drawing.Point(6, 135);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 18);
             this.label3.TabIndex = 25;
@@ -241,6 +241,7 @@
             this.groupBox2.Controls.Add(this.comboBoxSmallGenre);
             this.groupBox2.Controls.Add(this.labelProduct);
             this.groupBox2.Controls.Add(this.labelMaker);
+            this.groupBox2.Controls.Add(this.comboBoxProduct);
             this.groupBox2.Location = new System.Drawing.Point(539, 104);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(370, 239);
@@ -301,7 +302,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.buttonEasySearch);
             this.Controls.Add(this.buttonClear);
-            this.Controls.Add(this.comboBoxProduct);
             this.Controls.Add(this.dataGridViewDsp);
             this.Controls.Add(this.comboBoxMaker);
             this.Controls.Add(this.buttonSearch);

@@ -115,7 +115,7 @@
             // labelPrefectures
             // 
             this.labelPrefectures.AutoSize = true;
-            this.labelPrefectures.Location = new System.Drawing.Point(641, 234);
+            this.labelPrefectures.Location = new System.Drawing.Point(653, 233);
             this.labelPrefectures.Name = "labelPrefectures";
             this.labelPrefectures.Size = new System.Drawing.Size(80, 18);
             this.labelPrefectures.TabIndex = 6;
@@ -271,7 +271,7 @@
             "九州・沖縄"});
             this.comboBoxRegion.Location = new System.Drawing.Point(427, 225);
             this.comboBoxRegion.Name = "comboBoxRegion";
-            this.comboBoxRegion.Size = new System.Drawing.Size(121, 26);
+            this.comboBoxRegion.Size = new System.Drawing.Size(201, 26);
             this.comboBoxRegion.TabIndex = 34;
             this.comboBoxRegion.SelectionChangeCommitted += new System.EventHandler(this.comboBoxRegion_SelectionChangeCommitted);
             // 

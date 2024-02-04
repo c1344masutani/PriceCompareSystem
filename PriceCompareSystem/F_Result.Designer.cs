@@ -61,6 +61,7 @@
             this.dataGridViewReview = new System.Windows.Forms.DataGridView();
             this.buttonReview = new System.Windows.Forms.Button();
             this.labelReviewScore = new System.Windows.Forms.Label();
+            this.buttonReturn = new System.Windows.Forms.Button();
             this.panelReview.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewReview)).BeginInit();
@@ -232,7 +233,7 @@
             this.panelReview.Controls.Add(this.label10);
             this.panelReview.Controls.Add(this.textBoxTitle);
             this.panelReview.Controls.Add(this.label9);
-            this.panelReview.Location = new System.Drawing.Point(283, 222);
+            this.panelReview.Location = new System.Drawing.Point(328, 207);
             this.panelReview.Name = "panelReview";
             this.panelReview.Size = new System.Drawing.Size(716, 299);
             this.panelReview.TabIndex = 17;
@@ -360,18 +361,18 @@
             // dataGridViewReview
             // 
             this.dataGridViewReview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewReview.Location = new System.Drawing.Point(246, 266);
+            this.dataGridViewReview.Location = new System.Drawing.Point(328, 266);
             this.dataGridViewReview.Name = "dataGridViewReview";
             this.dataGridViewReview.RowHeadersVisible = false;
             this.dataGridViewReview.RowHeadersWidth = 62;
             this.dataGridViewReview.RowTemplate.Height = 27;
-            this.dataGridViewReview.Size = new System.Drawing.Size(990, 272);
+            this.dataGridViewReview.Size = new System.Drawing.Size(908, 272);
             this.dataGridViewReview.TabIndex = 18;
             this.dataGridViewReview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewReview_CellContentClick);
             // 
             // buttonReview
             // 
-            this.buttonReview.Location = new System.Drawing.Point(901, 207);
+            this.buttonReview.Location = new System.Drawing.Point(1067, 207);
             this.buttonReview.Name = "buttonReview";
             this.buttonReview.Size = new System.Drawing.Size(80, 51);
             this.buttonReview.TabIndex = 19;
@@ -383,11 +384,22 @@
             // 
             this.labelReviewScore.AutoSize = true;
             this.labelReviewScore.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.labelReviewScore.Location = new System.Drawing.Point(277, 222);
+            this.labelReviewScore.Location = new System.Drawing.Point(322, 207);
             this.labelReviewScore.Name = "labelReviewScore";
             this.labelReviewScore.Size = new System.Drawing.Size(120, 36);
             this.labelReviewScore.TabIndex = 20;
             this.labelReviewScore.Text = "label11";
+            // 
+            // buttonReturn
+            // 
+            this.buttonReturn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.buttonReturn.Location = new System.Drawing.Point(26, 18);
+            this.buttonReturn.Name = "buttonReturn";
+            this.buttonReturn.Size = new System.Drawing.Size(95, 68);
+            this.buttonReturn.TabIndex = 45;
+            this.buttonReturn.Text = "検索結果に戻る";
+            this.buttonReturn.UseVisualStyleBackColor = false;
+            this.buttonReturn.Click += new System.EventHandler(this.buttonReturn_Click);
             // 
             // F_Result
             // 
@@ -396,6 +408,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1309, 562);
             this.Controls.Add(this.labelReviewScore);
+            this.Controls.Add(this.buttonReturn);
             this.Controls.Add(this.buttonReview);
             this.Controls.Add(this.dataGridViewReview);
             this.Controls.Add(this.panelReview);
@@ -464,5 +477,6 @@
         private System.Windows.Forms.Button buttonReview;
         private System.Windows.Forms.Label labelReviewScore;
         private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.Button buttonReturn;
     }
 }

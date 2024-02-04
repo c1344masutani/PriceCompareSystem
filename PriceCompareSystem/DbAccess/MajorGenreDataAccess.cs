@@ -10,9 +10,9 @@ namespace PriceCompareSystem.DbAccess
 {
     internal class MajorGenreDataAccess
     {
-        public List<M_MajorGenre> GetMajorGenreDspData()
+        public List<M_MajorGenres> GetMajorGenreDspData()
         {
-            List<M_MajorGenre> MajorGenre = new List<M_MajorGenre>();
+            List<M_MajorGenres> MajorGenre = new List<M_MajorGenres>();
             try
             {
                 var context = new PriceCompareSystemContext();

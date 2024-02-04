@@ -37,6 +37,12 @@ namespace PriceCompareSystem
             }
         }
 
+        private void AllClear()
+        {
+            labelMgID.Text = "";
+            textBoxMgName.Text = "";
+        }
+
         private void F_MajorGenre_Load(object sender, EventArgs e)
         {
             //列数の指定
@@ -67,7 +73,7 @@ namespace PriceCompareSystem
                 return;
             }
 
-            var majorgenre = new M_MajorGenre
+            var majorgenre = new M_MajorGenres
             {
                 MgName = textBoxMgName.Text.Trim()
             };
@@ -91,6 +97,7 @@ namespace PriceCompareSystem
                 context.SaveChanges();
                 context.Dispose();
                 fncAllSelect();
+                AllClear();
                 MessageBox.Show("登録完了");
             }
             catch (Exception ex)
@@ -132,6 +139,7 @@ namespace PriceCompareSystem
                 context.SaveChanges();
                 context.Dispose();
                 fncAllSelect();
+                AllClear();
                 MessageBox.Show("更新完了");
             }
             catch (Exception ex)
@@ -144,7 +152,7 @@ namespace PriceCompareSystem
         {
             if (String.IsNullOrEmpty(labelMgID.Text.Trim()))
             {
-                MessageBox.Show("更新したい項目を選択してください");
+                MessageBox.Show("削除したい項目を選択してください");
                 return;
             }
             try
@@ -161,6 +169,7 @@ namespace PriceCompareSystem
                 context.SaveChanges();
                 context.Dispose();
                 fncAllSelect();
+                AllClear() ;
                 MessageBox.Show("削除完了");
             }
             catch (Exception ex)
@@ -173,6 +182,19 @@ namespace PriceCompareSystem
         {
             labelMgID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[0].Value.ToString();
             textBoxMgName.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[1].Value.ToString();
+        }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            AllClear();
+        }
+
+        private void buttonMenu_Click(object sender, EventArgs e)
+        {
+            Opacity = 0;
+            F_Genre f_Genre = new F_Genre();
+            f_Genre.ShowDialog();
+            f_Genre.Dispose();
         }
     }
 }

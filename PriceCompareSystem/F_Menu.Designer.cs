@@ -41,9 +41,9 @@
             this.buttonEasySearch.BackColor = System.Drawing.Color.DarkOrange;
             this.buttonEasySearch.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.buttonEasySearch.ForeColor = System.Drawing.Color.White;
-            this.buttonEasySearch.Location = new System.Drawing.Point(133, 226);
+            this.buttonEasySearch.Location = new System.Drawing.Point(230, 211);
             this.buttonEasySearch.Name = "buttonEasySearch";
-            this.buttonEasySearch.Size = new System.Drawing.Size(762, 188);
+            this.buttonEasySearch.Size = new System.Drawing.Size(639, 180);
             this.buttonEasySearch.TabIndex = 0;
             this.buttonEasySearch.Text = "かんたん検索";
             this.buttonEasySearch.UseVisualStyleBackColor = false;
@@ -54,9 +54,9 @@
             this.buttonSearch.BackColor = System.Drawing.Color.DodgerBlue;
             this.buttonSearch.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.buttonSearch.ForeColor = System.Drawing.Color.White;
-            this.buttonSearch.Location = new System.Drawing.Point(131, 487);
+            this.buttonSearch.Location = new System.Drawing.Point(230, 458);
             this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(764, 188);
+            this.buttonSearch.Size = new System.Drawing.Size(639, 180);
             this.buttonSearch.TabIndex = 1;
             this.buttonSearch.Text = "詳細検索";
             this.buttonSearch.UseVisualStyleBackColor = false;
@@ -66,7 +66,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("メイリオ", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label1.Location = new System.Drawing.Point(326, 33);
+            this.label1.Location = new System.Drawing.Point(326, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(414, 72);
             this.label1.TabIndex = 2;
@@ -75,7 +75,7 @@
             // buttonAdmin
             // 
             this.buttonAdmin.BackColor = System.Drawing.Color.Silver;
-            this.buttonAdmin.Location = new System.Drawing.Point(892, 33);
+            this.buttonAdmin.Location = new System.Drawing.Point(911, 23);
             this.buttonAdmin.Name = "buttonAdmin";
             this.buttonAdmin.Size = new System.Drawing.Size(131, 73);
             this.buttonAdmin.TabIndex = 32;
@@ -94,7 +94,7 @@
             // buttonFinish
             // 
             this.buttonFinish.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.buttonFinish.Location = new System.Drawing.Point(25, 33);
+            this.buttonFinish.Location = new System.Drawing.Point(37, 23);
             this.buttonFinish.Name = "buttonFinish";
             this.buttonFinish.Size = new System.Drawing.Size(131, 73);
             this.buttonFinish.TabIndex = 34;
@@ -108,7 +108,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1051, 762);
+            this.ClientSize = new System.Drawing.Size(1064, 718);
             this.Controls.Add(this.buttonFinish);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonAdmin);

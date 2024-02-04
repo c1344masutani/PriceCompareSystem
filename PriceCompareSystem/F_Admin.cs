@@ -79,5 +79,13 @@ namespace PriceCompareSystem
             f_Menu.ShowDialog();
             f_Menu.Dispose();
         }
+
+        private void buttonPWChange_Click(object sender, EventArgs e)
+        {
+            Opacity = 0;
+            F_AdminPW f_AdminPW = new F_AdminPW();
+            f_AdminPW.ShowDialog();
+            f_AdminPW.Dispose();
+        }
     }
 }

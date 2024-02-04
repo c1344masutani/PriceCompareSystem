@@ -10,9 +10,9 @@ namespace PriceCompareSystem.DbAccess
 {
     class MakerDataAccess
     {
-        public List<M_Maker> GetMakerDspData()
+        public List<M_Makers> GetMakerDspData()
         {
-            List<M_Maker> maker = new List<M_Maker>();
+            List<M_Makers> maker = new List<M_Makers>();
             try
             {
                 var context = new PriceCompareSystemContext();

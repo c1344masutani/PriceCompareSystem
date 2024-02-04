@@ -164,7 +164,7 @@ namespace PriceCompareSystem
 
             var context = new PriceCompareSystemContext();
             int stid = context.M_Stores.Single(x => x.StName == store).StID;
-            var review = new M_Review
+            var review = new M_Reviews
             {
                 StID = stid,
                 Title = textBoxTitle.Text,
@@ -210,6 +210,11 @@ namespace PriceCompareSystem
         private void dataGridViewReview_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void buttonReturn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

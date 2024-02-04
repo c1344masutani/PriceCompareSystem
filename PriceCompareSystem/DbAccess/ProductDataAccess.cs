@@ -11,9 +11,9 @@ namespace PriceCompareSystem.DbAccess
 {
     internal class ProductDataAccess
     {
-        public List<M_Product> GetProductDspData(int? mgid, int? sgid, int? maid)
+        public List<M_Products> GetProductDspData(int? mgid, int? sgid, int? maid)
         {
-            List<M_Product> product = new List<M_Product>();
+            List<M_Products> product = new List<M_Products>();
             try
             {
                 var context = new PriceCompareSystemContext();

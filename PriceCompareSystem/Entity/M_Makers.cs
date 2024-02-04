@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PriceCompareSystem.Entity
 {
-    class M_Maker
+    class M_Makers
     {
         [Key]
         public int MaID { get; set; }           //メーカーID

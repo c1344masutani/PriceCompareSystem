@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace PriceCompareSystem.Entity
 {
-    class M_Prefecture
+    internal class M_SmallGenres
     {
         [Key]
-        public int PfID { get; set; }       //都道府県ID
-        [MaxLength(5)]
+        public int SgID { get; set; }
+        public int MgID { get; set; }
+        [MaxLength(50)]
         [Required]
-        public string PfName { get; set; }  //都道府県名
-        public int region { get; set; }     //地域
+        public string SgName { get; set; }
     }
 }

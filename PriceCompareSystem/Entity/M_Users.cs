@@ -7,13 +7,15 @@ using System.Threading.Tasks;
 
 namespace PriceCompareSystem.Entity
 {
-    internal class M_SmallGenre
+    internal class M_Users
     {
         [Key]
-        public int SgID { get; set; }
-        public int MgID { get; set; }
+        public int UserID { get; set; }
         [MaxLength(50)]
         [Required]
-        public string SgName { get; set; }
+        public string UserName { get; set; }
+        [MaxLength(50)]
+        [Required]
+        public string PassWord { get; set; }
     }
 }

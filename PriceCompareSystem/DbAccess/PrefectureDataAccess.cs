@@ -10,9 +10,9 @@ namespace PriceCompareSystem.DbAccess
 {
     class PrefectureDataAccess
     {
-        public List<M_Prefecture> GetPrefectureDspData(int region)
+        public List<M_Prefectures> GetPrefectureDspData(int region)
         {
-            List<M_Prefecture> prefecture = new List<M_Prefecture>();
+            List<M_Prefectures> prefecture = new List<M_Prefectures>();
             try
             {
                 var context = new PriceCompareSystemContext();

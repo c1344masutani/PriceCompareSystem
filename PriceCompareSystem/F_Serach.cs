@@ -16,24 +16,24 @@ namespace PriceCompareSystem
     {
         //大ジャンルコンボボックス用
         MajorGenreDataAccess majorGenreDataAccess = new MajorGenreDataAccess();
-        private static List<M_MajorGenre> MajorGenre;
+        private static List<M_MajorGenres> MajorGenre;
 
         //小ジャンルコンボボックス用
         SmallGenreDataAccess smallGenreDataAccess = new SmallGenreDataAccess();
-        private static List<M_SmallGenre> SmallGenre;
+        private static List<M_SmallGenres> SmallGenre;
 
         //メーカーコンボボックス用
         MakerDataAccess makerDataAccess = new MakerDataAccess();
-        private static List<M_Maker> Maker;
+        private static List<M_Makers> Maker;
 
 
         //商品コンボボックス用
         ProductDataAccess productDataAccess = new ProductDataAccess();
-        private static List<M_Product> Product;
+        private static List<M_Products> Product;
 
         //都道府県コンボボックス用
         PrefectureDataAccess prefectureDataAccess = new PrefectureDataAccess();
-        private static List<M_Prefecture> Prefecture;
+        private static List<M_Prefectures> Prefecture;
 
         public F_Serach()
         {

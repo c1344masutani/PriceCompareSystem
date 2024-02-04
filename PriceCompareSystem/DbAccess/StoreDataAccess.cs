@@ -10,9 +10,9 @@ namespace PriceCompareSystem.DbAccess
 {
     internal class StoreDataAccess
     {
-        public List<M_Store> GetStoreDspData(int pfid)
+        public List<M_Stores> GetStoreDspData(int pfid)
         {
-            List<M_Store> store = new List<M_Store>();
+            List<M_Stores> store = new List<M_Stores>();
             try
             {
                 var context = new PriceCompareSystemContext();

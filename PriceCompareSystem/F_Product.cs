@@ -16,15 +16,15 @@ namespace PriceCompareSystem
     {
         //メーカーコンボボックス用
         MakerDataAccess makerDataAccess = new MakerDataAccess();
-        private static List<M_Maker> Maker;
+        private static List<M_Makers> Maker;
 
         //大ジャンルコンボボックス用
         MajorGenreDataAccess majorGenreDataAccess = new MajorGenreDataAccess();
-        private static List<M_MajorGenre> MajorGenre;
+        private static List<M_MajorGenres> MajorGenre;
 
         //小ジャンルコンボボックス用
         SmallGenreDataAccess smallGenreDataAccess = new SmallGenreDataAccess();
-        private static List<M_SmallGenre> SmallGenre;
+        private static List<M_SmallGenres> SmallGenre;
 
         public F_Product()
         {
@@ -184,7 +184,7 @@ namespace PriceCompareSystem
                 return;
             }
 
-            var product = new M_Product
+            var product = new M_Products
             {
                 PrName = textBoxPrName.Text.Trim(),
                 MaID = int.Parse(comboBoxMaker.SelectedValue.ToString()),

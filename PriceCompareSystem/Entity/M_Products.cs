@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PriceCompareSystem.Entity
 {
-    internal class M_Product
+    internal class M_Products
     {
         [Key]
         public int PrID { get; set; }       //商品ID

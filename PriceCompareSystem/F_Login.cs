@@ -26,17 +26,36 @@ namespace PriceCompareSystem
             if(String.IsNullOrEmpty(textBoxStID.Text.Trim()) || String.IsNullOrEmpty(textBoxPassWord.Text.Trim()))
             {
                 MessageBox.Show("IDまたはパスワードが入力されていません");
+                return;
             }
 
-            if(stid == "admin" && password == "admin")
+            if(stid == "admin")
             {
-                Form frm = new F_Admin();
+                try
+                {
+                    var context = new PriceCompareSystemContext();
+                    flg = context.M_Users.Any(x => x.UserName == stid && x.PassWord == password);
+                    if(flg == true)
+                    {
+                        Form frm = new F_Admin();
 
-                Opacity = 0;
-                frm.ShowDialog();
+                        Opacity = 0;
+                        frm.ShowDialog();
 
 
-                this.Close();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("管理者パスワードが違います");
+                        return;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
             }
             else
             {
@@ -61,6 +80,7 @@ namespace PriceCompareSystem
                     else
                     {
                         MessageBox.Show("IDまたはPWが違います。");
+                        return;
                     }
                 }
                 catch (Exception ex)

@@ -16,7 +16,7 @@ namespace PriceCompareSystem
     {
         //大ジャンルコンボボックス用
         MajorGenreDataAccess majorGenreDataAccess = new MajorGenreDataAccess();
-        private static List<M_MajorGenre> MajorGenre;
+        private static List<M_MajorGenres> MajorGenre;
 
         public F_Genre()
         {
@@ -95,7 +95,7 @@ namespace PriceCompareSystem
                 return;
             }
 
-            var genre = new M_SmallGenre
+            var genre = new M_SmallGenres
             {
                 MgID = int.Parse(comboBoxMajorGenre.SelectedValue.ToString()),
                 SgName = textBoxGeName.Text.Trim()

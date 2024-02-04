@@ -17,7 +17,7 @@ namespace PriceCompareSystem
     {
         //都道府県コンボボックス用
         PrefectureDataAccess prefectureDataAccess = new PrefectureDataAccess();
-        private static List<M_Prefecture> Prefecture;
+        private static List<M_Prefectures> Prefecture;
 
         public F_Store()
         {
@@ -136,7 +136,7 @@ namespace PriceCompareSystem
                 return;
             }
 
-            var store = new M_Store
+            var store = new M_Stores
             {
                 StName = textBoxStName.Text.Trim(),
                 Prefectures = int.Parse(comboBoxPrefectures.SelectedValue.ToString()),
